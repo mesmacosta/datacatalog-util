@@ -48,7 +48,7 @@ class DatacatalogUtilsCLI:
                                                  help='File path where file will be exported')
         export_tag_templates_parser.add_argument('--project-ids',
                                                  help='Project ids to narrow down Templates list,'
-                                                      'split by comma',
+                                                 'split by comma',
                                                  required=True)
         export_tag_templates_parser.set_defaults(func=cls.__export_tag_templates)
 
@@ -56,12 +56,12 @@ class DatacatalogUtilsCLI:
     def add_export_tags_cmd(cls, subparsers):
         export_tag_templates_parser = subparsers.add_parser('export-tags',
                                                             help='Export Tags, creates one file'
-                                                                 'for each teamplate')
-        export_tag_templates_parser.add_argument('--dir-path',
-                                                 help='Directory path where files will be exported')
+                                                            'for each teamplate')
+        export_tag_templates_parser.add_argument(
+            '--dir-path', help='Directory path where files will be exported')
         export_tag_templates_parser.add_argument('--project-ids',
                                                  help='Project ids to narrow down Templates list,'
-                                                      'split by comma',
+                                                 'split by comma',
                                                  required=True)
         export_tag_templates_parser.set_defaults(func=cls.__export_tags)
 
@@ -113,8 +113,8 @@ class DatacatalogUtilsCLI:
 
     @classmethod
     def __export_tags(cls, args):
-        tag_datasource_exporter.TagDatasourceExporter().export_tags(
-            project_ids=args.project_ids, dir_path=args.dir_path)
+        tag_datasource_exporter.TagDatasourceExporter().export_tags(project_ids=args.project_ids,
+                                                                    dir_path=args.dir_path)
 
 
 def main():

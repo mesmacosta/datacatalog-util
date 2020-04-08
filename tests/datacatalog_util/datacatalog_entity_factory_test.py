@@ -31,8 +31,7 @@ class DataCatalogEntityFactoryTest(unittest.TestCase):
         self.assertEqual(tag_template_dict['display_name'], tag_template.display_name)
         self.assertEqual(tag_template_dict['fields']['my_bool_field']['field_display_name'],
                          my_bool_field.display_name)
-        self.assertEqual(self.__BOOL_TYPE,
-                         my_bool_field.type.primitive_type)
+        self.assertEqual(self.__BOOL_TYPE, my_bool_field.type.primitive_type)
 
     def test_make_tag_template_valid_double_values_should_set_fields(self):
 
@@ -54,8 +53,7 @@ class DataCatalogEntityFactoryTest(unittest.TestCase):
         self.assertEqual(tag_template_dict['display_name'], tag_template.display_name)
         self.assertEqual(tag_template_dict['fields']['my_double_field']['field_display_name'],
                          my_double_field.display_name)
-        self.assertEqual(self.__DOUBLE_TYPE,
-                         my_double_field.type.primitive_type)
+        self.assertEqual(self.__DOUBLE_TYPE, my_double_field.type.primitive_type)
 
     def test_make_tag_template_valid_string_values_should_set_fields(self):
 
@@ -77,8 +75,7 @@ class DataCatalogEntityFactoryTest(unittest.TestCase):
         self.assertEqual(tag_template_dict['display_name'], tag_template.display_name)
         self.assertEqual(tag_template_dict['fields']['my_string_field']['field_display_name'],
                          my_string_field.display_name)
-        self.assertEqual(self.__STRING_TYPE,
-                         my_string_field.type.primitive_type)
+        self.assertEqual(self.__STRING_TYPE, my_string_field.type.primitive_type)
 
     def test_make_tag_template_valid_timestamp_values_should_set_fields(self):
 
@@ -100,8 +97,7 @@ class DataCatalogEntityFactoryTest(unittest.TestCase):
         self.assertEqual(tag_template_dict['display_name'], tag_template.display_name)
         self.assertEqual(tag_template_dict['fields']['my_timestamp_field']['field_display_name'],
                          my_timestamp_field.display_name)
-        self.assertEqual(self.__TIMESTAMP_TYPE,
-                         my_timestamp_field.type.primitive_type)
+        self.assertEqual(self.__TIMESTAMP_TYPE, my_timestamp_field.type.primitive_type)
 
     def test_make_tag_template_valid_enum_values_should_set_fields(self):
 

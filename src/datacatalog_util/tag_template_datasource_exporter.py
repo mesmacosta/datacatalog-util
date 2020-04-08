@@ -35,8 +35,7 @@ class TagTemplateDatasourceExporter:
         dataframe = self.__tag_templates_to_dataframe(tag_templates)
 
         if file_path is None:
-            file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                     'templates.csv')
+            file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates.csv')
 
         dataframe.to_csv(file_path)
         logging.info('Check the generated file at: %s', file_path)

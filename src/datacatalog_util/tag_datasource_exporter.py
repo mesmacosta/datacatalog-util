@@ -31,9 +31,7 @@ class TagDatasourceExporter:
         logging.info('')
         logging.info('==== Export Tags [FINISHED] =============')
 
-    def __export_tags(self,
-                      project_ids,
-                      dir_path=None):
+    def __export_tags(self, project_ids, dir_path=None):
         search_results = self.__datacatalog_facade.search_tag_templates(project_ids)
 
         if dir_path is None:
@@ -51,8 +49,8 @@ class TagDatasourceExporter:
             logging.info('')
             logging.info('Looking for Tags from Template: {}...'.format(tag_template_id))
 
-            tagged_assets = self.__datacatalog_facade.search_tagged_assets(project_id,
-                                                                           tag_template_id)
+            tagged_assets = self.__datacatalog_facade.search_tagged_assets(
+                project_id, tag_template_id)
 
             entry_name = ''
             for tagged_asset in tagged_assets:
@@ -67,8 +65,7 @@ class TagDatasourceExporter:
                     tags = self.__datacatalog_facade.list_tags(entry_name)
                     asset_dataframe = self.__tags_to_dataframe(linked_resource,
                                                                relative_resource_name,
-                                                               tag_template_name,
-                                                               tags)
+                                                               tag_template_name, tags)
 
                     if template_dataframe is not None:
                         template_dataframe = template_dataframe.append(asset_dataframe)
@@ -80,8 +77,7 @@ class TagDatasourceExporter:
                         ' The resource will be skipped.', entry_name)
 
             if template_dataframe is not None:
-                file_path = os.path.join(dir_path,
-                                         '{}.csv'.format(tag_template_id))
+                file_path = os.path.join(dir_path, '{}.csv'.format(tag_template_id))
                 template_dataframe.to_csv(file_path)
                 logging.info('==> Tags from Template: {} exported.'.format(tag_template_id))
 
@@ -126,8 +122,8 @@ class TagDatasourceExporter:
 
             tag_template_name = key_value
             tags_count = template_subset['tag_name'][template_subset['tag_name'] != ''].nunique()
-            tagged_columns_count = template_subset[
-                'column'][template_subset['column'] != ''].nunique()
+            tagged_columns_count = template_subset['column'][
+                template_subset['column'] != ''].nunique()
             tagged_entries_count = tags_count - tagged_columns_count
             field_type_count = template_subset['field_type'].value_counts()
 

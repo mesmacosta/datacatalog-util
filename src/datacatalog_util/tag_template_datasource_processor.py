@@ -152,4 +152,3 @@ class TagTemplateDatasourceProcessor:
                 }
 
         return id_to_field_map
-

@@ -19,8 +19,7 @@ class DataCatalogFacadeTest(unittest.TestCase):
         self.assertIsNotNone(self.__datacatalog_facade.__dict__['_DataCatalogFacade__datacatalog'])
 
     def test_create_tag_template_should_succeed(self):
-        self.__datacatalog_facade.create_tag_template('test-project',
-                                                      'location-id',
+        self.__datacatalog_facade.create_tag_template('test-project', 'location-id',
                                                       'tag_template_id', {})
 
         datacatalog = self.__datacatalog_client
@@ -114,9 +113,9 @@ class DataCatalogFacadeTest(unittest.TestCase):
         search_results = [entry, entry_2]
 
         datacatalog = self.__datacatalog_client
-        datacatalog.get_tag_template.side_effect = [{},
-                                                    exceptions.GoogleAPICallError(
-                                                        'Permission denied')]
+        datacatalog.get_tag_template.side_effect = [
+            {}, exceptions.GoogleAPICallError('Permission denied')
+        ]
 
         return_value = self.__datacatalog_facade.get_tag_templates_from_search_results(
             search_results)
