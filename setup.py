@@ -1,5 +1,11 @@
 import setuptools
 
+with open('README.rst') as readme_file:
+    readme = readme_file.read()
+
+with open('HISTORY.rst') as history_file:
+    history = history_file.read()
+
 setuptools.setup(
     name='datacatalog-util',
     version='0.1.0',
@@ -24,6 +30,9 @@ setuptools.setup(
     ),
     setup_requires=('pytest-runner', ),
     tests_require=('pytest-cov', ),
+    python_requires='>=3.6',
+    license="MIT license",
+    long_description=readme + '\n\n' + history,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Natural Language :: English',
@@ -31,4 +40,6 @@ setuptools.setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
+    url='https://github.com/mesmacosta/datacatalog-util',
+    zip_safe=False,
 )
