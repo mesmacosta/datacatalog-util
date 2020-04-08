@@ -1,0 +1,19 @@
+linked_resource,template_name,column,field_id,field_value
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,boolean_field1,FALSE
+,,,boolean_field2,TRUE
+,,,double_field,2.56
+,,,enum_data_classification,Restricted
+,,,string_field,A string value
+,,,timestamp_field,2019-07-10T19:38:44-0700
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,boolean_field1,t
+,,,boolean_field2,f
+,,,double_field,19.4
+,,,enum_data_classification,Confidential
+,,,string_field,One more string value
+,,,timestamp_field,2019-10-03T21:29:32-0300
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,id,boolean_field1,t
+,,id,boolean_field2,f
+,,id,double_field,32.8
+,,id,enum_data_classification,Confidential
+,,id,string_field,The third string value
+,,id,timestamp_field,2019-10-03T21:34:48-0300

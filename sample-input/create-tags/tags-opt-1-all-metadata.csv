@@ -1,0 +1,19 @@
+linked_resource,template_name,column,field_id,field_value
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,boolean_field1,FALSE
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,boolean_field2,TRUE
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,double_field,2.56
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,enum_data_classification,Restricted
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,string_field,A string value
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,timestamp_field,2019-07-10T19:38:44-0700
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,boolean_field1,t
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,boolean_field2,f
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,double_field,19.4
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,enum_data_classification,Confidential
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,string_field,One more string value
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,,timestamp_field,2019-10-03T21:29:32-0300
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,id,boolean_field1,t
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,id,boolean_field2,f
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,id,double_field,32.8
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,id,enum_data_classification,Confidential
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,id,string_field,The third string value
+//bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID,projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,id,timestamp_field,2019-10-03T21:34:48-0300
