@@ -115,7 +115,7 @@ credentials/
 
 # Generated files
 tags/*
-sample-input/*
+sample-input/*/*.csv
 
 # Files used for demonstrations
 instructions.txt
