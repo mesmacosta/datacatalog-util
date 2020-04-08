@@ -4,8 +4,6 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 
 **Disclaimer: This is not an officially supported Google product.**
 
-[![CircleCI][1]][2]
-
 ## 1. Environment setup
 
 ### 1.1. Python + virtualenv
@@ -207,8 +205,6 @@ described as follows:
 datacatalog-util export-tag-templates --project-ids my-project --file-path CSV_FILE_PATH
 ```
 
-[1]: https://circleci.com/gh/ricardolsmendes/datacatalog-util.svg?style=svg
-[2]: https://circleci.com/gh/ricardolsmendes/datacatalog-util
 [3]: https://virtualenv.pypa.io/en/latest/
 [4]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-tags
 [5]: https://docs.google.com/spreadsheets/d/1bqeAXjLHUq0bydRZj9YBhdlDtuu863nwirx8t4EP_CQ
