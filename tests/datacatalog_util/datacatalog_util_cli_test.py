@@ -48,7 +48,7 @@ class TagManagerCLITest(unittest.TestCase):
     @mock.patch('datacatalog_util.datacatalog_util_cli.tag_template_datasource_processor.'
                 'TagTemplateDatasourceProcessor')
     def test_run_delete_tag_templates_should_call_correct_method(
-        self, mock_tag_template_datasource_processor):   # noqa: E125
+        self, mock_tag_template_datasource_processor):  # noqa: E125
 
         datacatalog_util_cli.DatacatalogUtilsCLI.run(
             ['delete-tag-templates', '--csv-file', 'test.csv'])
