@@ -86,9 +86,7 @@ cd ./datacatalog-util
 
 #### 1.3.1. Create a service account and grant it below roles
 
-- BigQuery Metadata Viewer
 - Data Catalog Admin
-- A custom role with `bigquery.datasets.updateTag` and `bigquery.tables.updateTag` permissions 
 
 #### 1.3.2. Download a JSON key and save it as
 - `./credentials/datacatalog-util.json`
