@@ -1,8 +1,8 @@
 # datacatalog-util
 
-A Python package to manage Google Cloud Data Catalog helper commands and scripts.
+[![CircleCI][1]][2] [![PyPi][7]][8] [![License][9]][9] [![Issues][10]][11]
 
-[![CircleCI][1]][2]
+A Python package to manage Google Cloud Data Catalog helper commands and scripts.
 
 **Disclaimer: This is not an officially supported Google product.**
 
@@ -213,3 +213,8 @@ datacatalog-util export-tag-templates --project-ids my-project --file-path CSV_F
 [4]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-tags
 [5]: https://docs.google.com/spreadsheets/d/1bqeAXjLHUq0bydRZj9YBhdlDtuu863nwirx8t4EP_CQ
 [6]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-tag-templates
+[7]: https://img.shields.io/pypi/v/datacatalog-util.svg
+[8]: https://pypi.org/project/datacatalog-util/
+[9]: https://img.shields.io/github/license/mesmacosta/datacatalog-util.svg
+[10]: https://img.shields.io/github/issues/mesmacosta/datacatalog-util.svg
+[11]: https://github.com/mesmacosta/datacatalog-util/issues
