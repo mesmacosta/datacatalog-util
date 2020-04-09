@@ -8,13 +8,18 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 
 ## Commands List
 
-| Command                  | Description                     | Documentation Link | Code Repo |
-| ---                      | ---                             | ---                | ---       |
-| **create-tags**          | Load Tags from CSV file.        | [GO][12]           | [GO][18]  |
-| **export-tags**          | Export Tags to CSV file.        | [GO][13]           | [GO][17]  |
-| **create-tag-templates** | Load Templates from CSV file.   | [GO][14]           | [GO][17]  |
-| **delete-tag-templates** | Delete Templates from CSV file. | [GO][15]           | [GO][17]  |
-| **export-tag-templates** | Export Templates to CSV file.   | [GO][16]           | [GO][17]  |
+| GROUP          | Command                        | Description                                         | Documentation Link | Code Repo |
+| ---            | ---                            | ---                                                 | ---                | ---       |
+| `tags`         |**create**                      | Load Tags from CSV file.                            | [GO][12]           | [GO][18]  |
+| `tags`         |**export**                      | Export Tags to CSV file.                            | [GO][13]           | [GO][17]  |
+| `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][17]  |
+| `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][17]  |
+| `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][17]  |
+| `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][16]           | [GO][19]  |
+| `filesets`     |**clean-up-templates-and-tags** | Cleans up Fileset Templates and Tags.               | [GO][16]           | [GO][19]  |
+| `filesets`     |**clean-up-all**                | Clean up Fileset Entries, Their Tags and Templates. | [GO][16]           | [GO][19]  |
+
+
 
 
 ## 1. Environment setup
@@ -106,7 +111,7 @@ described as follows:
 - Python + virtualenv
 
 ```bash
-datacatalog-util create-tags --csv-file CSV_FILE_PATH
+datacatalog-util tags create --csv-file CSV_FILE_PATH
 ```
 
 - Docker
@@ -155,7 +160,7 @@ The columns for each template file are described as follows:
 - Python + virtualenv
 
 ```bash
-datacatalog-util export-tags --project-ids my-project --dir-path DIR_PATH
+datacatalog-util tags export --project-ids my-project --dir-path DIR_PATH
 ```
 
 ## 4. Load Templates from CSV file
@@ -180,7 +185,7 @@ described as follows:
 - Python + virtualenv
 
 ```bash
-datacatalog-util create-tag-templates --csv-file CSV_FILE_PATH
+datacatalog-util tag-templates create --csv-file CSV_FILE_PATH
 ```
 
 ### 4.3. Run the datacatalog-util script - Delete the Tag Templates
@@ -188,7 +193,7 @@ datacatalog-util create-tag-templates --csv-file CSV_FILE_PATH
 - Python + virtualenv
 
 ```bash
-datacatalog-util delete-tag-templates --csv-file CSV_FILE_PATH
+datacatalog-util tag-templates delete --csv-file CSV_FILE_PATH
 ```
 
 *TIPS* 
@@ -215,8 +220,34 @@ described as follows:
 - Python + virtualenv
 
 ```bash
-datacatalog-util export-tag-templates --project-ids my-project --file-path CSV_FILE_PATH
+datacatalog-util tag-templates export --project-ids my-project --file-path CSV_FILE_PATH
 ```
+
+## 6. Filesets Commands
+
+### 6.1. Enrich GCS Filesets with Tags
+Users are able to choose the Tag fields from the list provided at [Tags][23]
+
+```bash
+datacatalog-util filesets --project-ids my-project enrich
+```
+
+### 6.2. clean up template and tags
+Cleans up the Template and Tags from the Fileset Entries, running the main command will recreate those.
+
+```bash
+datacatalog-util filesets --project-ids my-project clean-up-templates-and-tags 
+```
+
+### 6.3.  clean up all (Non Reversible, be careful)
+Cleans up the Fileset Entries, Template and Tags. You have to re create the Fileset entries if you need to restore the state,
+which is outside the scope of this script.
+
+```bash
+datacatalog-util filesets --project-ids my-project clean-up-all
+
+```
+
 
 [1]: https://circleci.com/gh/mesmacosta/datacatalog-util.svg?style=svg
 [2]: https://circleci.com/gh/mesmacosta/datacatalog-util
@@ -236,3 +267,8 @@ datacatalog-util export-tag-templates --project-ids my-project --file-path CSV_F
 [16]: https://github.com/mesmacosta/datacatalog-util#5-export-templates-to-csv-file
 [17]: https://github.com/mesmacosta/datacatalog-util
 [18]: https://github.com/ricardolsmendes/datacatalog-tag-manager
+[19]: https://github.com/mesmacosta/datacatalog-fileset-enricher
+[20]: https://github.com/mesmacosta/datacatalog-fileset-enricher
+[21]: https://github.com/mesmacosta/datacatalog-fileset-enricher
+[22]: https://github.com/mesmacosta/datacatalog-fileset-enricher
+[23]: https://github.com/mesmacosta/datacatalog-fileset-enricher
