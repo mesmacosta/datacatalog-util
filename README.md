@@ -15,9 +15,9 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][17]  |
 | `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][17]  |
 | `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][17]  |
-| `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][16]           | [GO][19]  |
-| `filesets`     |**clean-up-templates-and-tags** | Cleans up Fileset Templates and Tags.               | [GO][16]           | [GO][19]  |
-| `filesets`     |**clean-up-all**                | Clean up Fileset Entries, Their Tags and Templates. | [GO][16]           | [GO][19]  |
+| `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
+| `filesets`     |**clean-up-templates-and-tags** | Cleans up Fileset Templates and Tags.               | [GO][21]           | [GO][19]  |
+| `filesets`     |**clean-up-all**                | Clean up Fileset Entries, Their Tags and Templates. | [GO][22]           | [GO][19]  |
 
 
 
@@ -268,7 +268,7 @@ datacatalog-util filesets --project-ids my-project clean-up-all
 [17]: https://github.com/mesmacosta/datacatalog-util
 [18]: https://github.com/ricardolsmendes/datacatalog-tag-manager
 [19]: https://github.com/mesmacosta/datacatalog-fileset-enricher
-[20]: https://github.com/mesmacosta/datacatalog-fileset-enricher
-[21]: https://github.com/mesmacosta/datacatalog-fileset-enricher
-[22]: https://github.com/mesmacosta/datacatalog-fileset-enricher
-[23]: https://github.com/mesmacosta/datacatalog-fileset-enricher
+[20]: https://github.com/mesmacosta/datacatalog-util#61-enrich-gcs-filesets-with-tags
+[21]: https://github.com/mesmacosta/datacatalog-util#62-clean-up-template-and-tags
+[22]: https://github.com/mesmacosta/datacatalog-util#63--clean-up-all-non-reversible-be-careful
+[23]: https://github.com/mesmacosta/datacatalog-fileset-enricher#1-created-tags
