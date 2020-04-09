@@ -1,9 +1,9 @@
 import setuptools
 
-with open('README.rm') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rm') as history_file:
+with open('HISTORY.md') as history_file:
     history = history_file.read()
 
 setuptools.setup(
@@ -34,6 +34,7 @@ setuptools.setup(
     python_requires='>=3.6',
     license="MIT license",
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/markdown',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Natural Language :: English',
