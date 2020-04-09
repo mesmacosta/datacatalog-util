@@ -8,7 +8,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 
 ## Commands List
 
-| GROUP          | Command                        | Description                                         | Documentation Link | Code Repo |
+| Group          | Command                        | Description                                         | Documentation Link | Code Repo |
 | ---            | ---                            | ---                                                 | ---                | ---       |
 | `tags`         |**create**                      | Load Tags from CSV file.                            | [GO][12]           | [GO][18]  |
 | `tags`         |**export**                      | Export Tags to CSV file.                            | [GO][13]           | [GO][17]  |
