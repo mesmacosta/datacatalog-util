@@ -20,6 +20,20 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `filesets`     |**clean-up-all**                | Clean up Fileset Entries, Their Tags and Templates. | [GO][22]           | [GO][19]  |
 
 
+## Executing in Cloud Shell
+````bash
+# Set your SERVICE ACCOUNT, for instructions go to 1.3. Auth credentials
+export GOOGLE_APPLICATION_CREDENTIALS=~/datacatalog-util.json
+
+# Install datacatalog-util 
+pip3 install datacatalog-util --user
+
+# Add to your PATH
+export PATH=~/.local/bin:$PATH
+
+# Look for your commands
+datacatalog-util --help
+````
 
 
 ## 1. Environment setup
