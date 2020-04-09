@@ -31,7 +31,7 @@ pip3 install datacatalog-util --user
 # Add to your PATH
 export PATH=~/.local/bin:$PATH
 
-# Look for your commands
+# Look for available commands
 datacatalog-util --help
 ````
 
