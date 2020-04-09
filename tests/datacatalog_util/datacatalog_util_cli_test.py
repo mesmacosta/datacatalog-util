@@ -76,9 +76,9 @@ class TagManagerCLITest(unittest.TestCase):
     @mock.patch(
         'datacatalog_util.datacatalog_util_cli.tag_datasource_exporter.TagDatasourceExporter')
     def test_run_export_tags_should_call_correct_method(self, mock_tag_datasource_exporter):
-        datacatalog_util_cli.DatacatalogUtilsCLI.run(
-            ['tags', 'export', '--dir-path', 'test.csv', '--project-ids',
-             'my-project1,my-project2'])
+        datacatalog_util_cli.DatacatalogUtilsCLI.run([
+            'tags', 'export', '--dir-path', 'test.csv', '--project-ids', 'my-project1,my-project2'
+        ])
 
         tag_datasource_processor = mock_tag_datasource_exporter.return_value
         tag_datasource_processor.export_tags.assert_called_once()
