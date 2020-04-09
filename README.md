@@ -23,6 +23,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 ## Executing in Cloud Shell
 ````bash
 # Set your SERVICE ACCOUNT, for instructions go to 1.3. Auth credentials
+# This name is just a suggestion, feel free to name if following your naming conventions
 export GOOGLE_APPLICATION_CREDENTIALS=~/datacatalog-util-sa.json
 
 # Install datacatalog-util 
@@ -89,6 +90,7 @@ cd ./datacatalog-util
 - Data Catalog Admin
 
 #### 1.3.2. Download a JSON key and save it as
+This name is just a suggestion, feel free to name if following your naming conventions
 - `./credentials/datacatalog-util-sa.json`
 
 #### 1.3.3. Set the environment variables
