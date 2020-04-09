@@ -1,10 +1,11 @@
 import setuptools
 
-with open('README.md') as readme_file:
-    readme = readme_file.read()
-
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
+try:
+    from pypandoc import convert_file
+    read_md = lambda f: convert_file(f, 'rst')
+except ImportError:
+    print("warning: pypandoc module not found, could not convert Markdown to RST")
+    read_md = lambda f: open(f, 'r').read()
 
 setuptools.setup(
     name='datacatalog-util',
@@ -26,13 +27,13 @@ setuptools.setup(
         'google-cloud-datacatalog',
         'pandas',
         'tabulate',
-        'datacatalog-tag-manager @ git+https://github.com/ricardolsmendes/datacatalog-tag-manager',
+        'datacatalog-tag-manager',
     ),
     setup_requires=('pytest-runner', ),
     tests_require=('pytest-cov', ),
     python_requires='>=3.6',
     license="MIT license",
-    long_description=readme + '\n\n' + history,
+    long_description=read_md('README.md'),
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Natural Language :: English',
