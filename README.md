@@ -6,6 +6,17 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 
 **Disclaimer: This is not an officially supported Google product.**
 
+## Commands List
+
+| Command                  | Description                     | Documentation Link | Code Repo |
+| ---                      | ---                             | ---                | ---       |
+| **create-tags**          | Load Tags from CSV file.        | [GO][12]           | [GO][18]  |
+| **export-tags**          | Export Tags to CSV file.        | [GO][13]           | [GO][17]  |
+| **create-tag-templates** | Load Templates from CSV file.   | [GO][14]           | [GO][17]  |
+| **delete-tag-templates** | Delete Templates from CSV file. | [GO][15]           | [GO][17]  |
+| **export-tag-templates** | Export Templates to CSV file.   | [GO][16]           | [GO][17]  |
+
+
 ## 1. Environment setup
 
 ### 1.1. Python + virtualenv
@@ -218,3 +229,10 @@ datacatalog-util export-tag-templates --project-ids my-project --file-path CSV_F
 [9]: https://img.shields.io/github/license/mesmacosta/datacatalog-util.svg
 [10]: https://img.shields.io/github/issues/mesmacosta/datacatalog-util.svg
 [11]: https://github.com/mesmacosta/datacatalog-util/issues
+[12]: https://github.com/mesmacosta/datacatalog-util#2-load-tags-from-csv-file
+[13]: https://github.com/mesmacosta/datacatalog-util#3-export-tags-to-csv-file
+[14]: https://github.com/mesmacosta/datacatalog-util#4-load-templates-from-csv-file
+[15]: https://github.com/mesmacosta/datacatalog-util#43-run-the-datacatalog-util-script---delete-the-tag-templates
+[16]: https://github.com/mesmacosta/datacatalog-util#5-export-templates-to-csv-file
+[17]: https://github.com/mesmacosta/datacatalog-util
+[18]: https://github.com/ricardolsmendes/datacatalog-tag-manager
