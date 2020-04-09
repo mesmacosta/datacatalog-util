@@ -3,7 +3,7 @@ FROM python:3.6 as builder
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable.
 # At run time, /credentials must be binded to a volume containing a valid
 # Service Account credentials file named datacatalog-utils.json.
-ENV GOOGLE_APPLICATION_CREDENTIALS=/credentials/datacatalog-utils.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=/credentials/datacatalog-util-sa.json
 
 WORKDIR /app
 
