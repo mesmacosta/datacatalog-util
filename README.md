@@ -88,6 +88,7 @@ cd ./datacatalog-util
 #### 1.3.1. Create a service account and grant it below roles
 
 - Data Catalog Admin
+- Storage Admin
 
 #### 1.3.2. Download a JSON key and save it as
 This name is just a suggestion, feel free to name it following your naming conventions
