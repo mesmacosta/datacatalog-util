@@ -119,7 +119,6 @@ class TagTemplateDatasourceProcessorTest(unittest.TestCase):
                 'enum_values': [None, None, None, None, 'PII_1|PII_2|PII_3|PII_4|PII_5|PII_6']
             })
 
-        datacatalog_facade = self.__datacatalog_facade
         self.__tag_datasource_processor.delete_tag_templates_from_csv('file-path')
         self.assertEqual(1, self.__datacatalog_facade.delete_tag_template.call_count)
         self.assertEqual(0, self.__datacatalog_facade.get_tag_template.call_count)
