@@ -23,8 +23,8 @@ class TagDatasourceExporterTest(unittest.TestCase):
             os.remove(self.__summary_file_path)
 
     def test_constructor_should_set_instance_attributes(self):
-        self.assertIsNotNone(self.__tag_datasource_exporter.__dict__[
-                                 '_TagDatasourceExporter__datacatalog_facade'])
+        self.assertIsNotNone(
+            self.__tag_datasource_exporter.__dict__['_TagDatasourceExporter__datacatalog_facade'])
 
     def test_export_tags_when_no_templates_should_not_create_csv_files(self):
         self.__tag_datasource_exporter.export_tags('uat-env-1')
@@ -40,8 +40,9 @@ class TagDatasourceExporterTest(unittest.TestCase):
 
         project_id, location_id, tag_template_id = 'my_project', 'my_location', 'my_template'
 
-        self.__datacatalog_facade.extract_resources_from_template.return_value = (
-            project_id, location_id, tag_template_id)
+        self.__datacatalog_facade.extract_resources_from_template.return_value = (project_id,
+                                                                                  location_id,
+                                                                                  tag_template_id)
 
         self.__tag_datasource_exporter.export_tags('uat-env-1', self.__csv_file_path)
 
@@ -73,8 +74,9 @@ class TagDatasourceExporterTest(unittest.TestCase):
         search_template_result.relative_resource_name = tag_template_id
         search_template_result_2 = MockedObject()
         search_template_result_2.relative_resource_name = tag_template_id_2
-        self.__datacatalog_facade.search_tag_templates.return_value = [search_template_result,
-                                                                       search_template_result_2]
+        self.__datacatalog_facade.search_tag_templates.return_value = [
+            search_template_result, search_template_result_2
+        ]
 
         project_id, location_id = 'my_project', 'my_location'
 
@@ -89,10 +91,9 @@ class TagDatasourceExporterTest(unittest.TestCase):
 
         self.__datacatalog_facade.search_tagged_assets.return_value = [search_tag_result]
 
-        self.__datacatalog_facade.list_tags.side_effect = [[create_default_tag(tag_template_id,
-                                                                               'my_tag_1')],
-                                                           [create_default_tag(tag_template_id_2,
-                                                                               'my_tag_2')]]
+        self.__datacatalog_facade.list_tags.side_effect = [[
+            create_default_tag(tag_template_id, 'my_tag_1')
+        ], [create_default_tag(tag_template_id_2, 'my_tag_2')]]
 
         self.__tag_datasource_exporter.export_tags('my-project', self.__csv_file_path)
 
@@ -130,8 +131,9 @@ class TagDatasourceExporterTest(unittest.TestCase):
         search_template_result.relative_resource_name = tag_template_id
         search_template_result_2 = MockedObject()
         search_template_result_2.relative_resource_name = tag_template_id_2
-        self.__datacatalog_facade.search_tag_templates.return_value = [search_template_result,
-                                                                       search_template_result_2]
+        self.__datacatalog_facade.search_tag_templates.return_value = [
+            search_template_result, search_template_result_2
+        ]
 
         project_id, location_id = 'my_project', 'my_location'
 
@@ -146,12 +148,9 @@ class TagDatasourceExporterTest(unittest.TestCase):
 
         self.__datacatalog_facade.search_tagged_assets.return_value = [search_tag_result]
 
-        self.__datacatalog_facade.list_tags.side_effect = [[create_default_tag(tag_template_id,
-                                                                               'my_tag_1',
-                                                                               'my_col')],
-                                                           [create_default_tag(tag_template_id_2,
-                                                                               'my_tag_2',
-                                                                               'my_col')]]
+        self.__datacatalog_facade.list_tags.side_effect = [[
+            create_default_tag(tag_template_id, 'my_tag_1', 'my_col')
+        ], [create_default_tag(tag_template_id_2, 'my_tag_2', 'my_col')]]
 
         self.__tag_datasource_exporter.export_tags('my-project', self.__csv_file_path)
 
