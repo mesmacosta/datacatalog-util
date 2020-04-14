@@ -1,4 +1,4 @@
-# Datacatalog Util [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Data%20Catalog%20utils%20scripts%20&url=https://github.com/mesmacosta/datacatalog-util&via=github&hashtags=datacatalog,python,bulk,bigdata)
+# Datacatalog Util [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Data%20Catalog%20util%20scripts%20&url=https://github.com/mesmacosta/datacatalog-util&via=github&hashtags=datacatalog,python,bulk,bigdata)
 
 
 [![CircleCI][1]][2] [![PyPi][7]][8] [![License][9]][9] [![Issues][10]][11]
