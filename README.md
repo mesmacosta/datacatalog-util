@@ -56,7 +56,7 @@ mkdir ./datacatalog-util
 cd ./datacatalog-util
 ````
 
-_All paths starting with `./` in the next steps are relative to the `utilsr`
+_All paths starting with `./` in the next steps are relative to the `datacatalog-util`
 folder._
 
 #### 1.1.3. Create and activate an isolated Python environment
