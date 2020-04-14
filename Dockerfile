@@ -30,4 +30,4 @@ FROM builder as run
 # Install the package.
 RUN pip install .
 
-ENTRYPOINT ["datacatalog-utils"]
+ENTRYPOINT ["datacatalog-util"]
