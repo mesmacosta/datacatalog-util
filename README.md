@@ -37,7 +37,6 @@ export PATH=~/.local/bin:$PATH
 datacatalog-util --help
 ````
 
-
 ## 1. Environment setup
 
 ### 1.1. Python + virtualenv
@@ -46,15 +45,11 @@ Using [virtualenv][3] is optional, but strongly recommended unless you use [Dock
 
 #### 1.1.1. Install Python 3.6+
 
-#### 1.1.2. Create a folder
-
-This is recommended so all related stuff will reside at same place, making it easier to follow
-below instructions.
-
-````bash
-mkdir ./datacatalog-util
+#### 1.1.2. Get the source code
+```bash
+git clone https://github.com/mesmacosta/datacatalog-util
 cd ./datacatalog-util
-````
+```
 
 _All paths starting with `./` in the next steps are relative to the `datacatalog-util`
 folder._
@@ -77,12 +72,6 @@ pip install --upgrade .
 
 Docker may be used as an alternative to run the script. In this case, please disregard the
 [Virtualenv](#11-python--virtualenv) setup instructions.
-
-#### 1.2.1. Get the source code
-```bash
-git clone https://github.com/mesmacosta/datacatalog-util
-cd ./datacatalog-util
-```
 
 ### 1.3. Auth credentials
 
