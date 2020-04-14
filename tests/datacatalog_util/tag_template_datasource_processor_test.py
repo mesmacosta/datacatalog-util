@@ -98,14 +98,13 @@ class TagTemplateDatasourceProcessorTest(unittest.TestCase):
         mock_read_csv.return_value = pd.DataFrame(
             data={
                 'template_name':
-                    ['my-template', 'my-template', 'my-template', 'my-template', 'my-template'],
+                ['my-template', 'my-template', 'my-template', 'my-template', 'my-template'],
                 'display_name': [
                     'My Template for test', 'My Template for test', 'My Template for test',
                     'My Template for test', 'My Template for test'
                 ],
                 'field_id':
-                    ['string_field', 'boolean_field', 'double_field', 'timestamp_field',
-                     'enum_field'],
+                ['string_field', 'boolean_field', 'double_field', 'timestamp_field', 'enum_field'],
                 'field_display_name': [
                     'My String Field', 'My Boolean Field', 'My Double Field', 'My Timestamp Field',
                     'My Enum Field'
@@ -121,12 +120,10 @@ class TagTemplateDatasourceProcessorTest(unittest.TestCase):
             })
 
         datacatalog_facade = self.__datacatalog_facade
-        self.__tag_datasource_processor.delete_tag_templates_from_csv(
-            'file-path')
+        self.__tag_datasource_processor.delete_tag_templates_from_csv('file-path')
         self.assertEqual(1, self.__datacatalog_facade.delete_tag_template.call_count)
         self.assertEqual(0, self.__datacatalog_facade.get_tag_template.call_count)
         self.assertEqual(0, self.__datacatalog_facade.extract_resources_from_template.call_count)
-
 
     def execute_create_tag_template_and_assert(self):
         datacatalog_facade = self.__datacatalog_facade
