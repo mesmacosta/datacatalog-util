@@ -1,0 +1,11 @@
+template_name,display_name,field_id,field_display_name,field_type,enum_values
+my_template,my_template,has_pii,Has PII,BOOL,
+,,num_rows,Number of rows in data asset,DOUBLE,
+,,source,Source of data asset,STRING,
+,,execution_time,,TIMESTAMP,
+,,pii_type,PII type,ENUM,EMAIL|SOCIAL SECURITY NUMBER|NONE
+my_template_2,my_template_2,num_rows,Number of rows in data asset,DOUBLE,
+,,source,Source of data asset,STRING,
+,,execution_time,,TIMESTAMP,
+,,pii_type,PII type,ENUM,EMAIL|SOCIAL SECURITY NUMBER|NONE
+,,has_pii,Has PII,BOOL,

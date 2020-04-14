@@ -1,0 +1,6 @@
+relative_resource_name,linked_resource,template_name,tag_name,column,field_id,field_type,field_value
+my_tagged_entry,my_tagged_entry_linked_resource,my_template_2,my_tag_2,my_col,num_rows,DOUBLE,113496874.0
+,my_tagged_entry_linked_resource,my_template_2,my_tag_2,my_col,timestamp_field,TIMESTAMP,2020-04-14T18:37:58.223946Z
+,my_tagged_entry_linked_resource,my_template_2,my_tag_2,my_col,source,STRING,Copied from tlc_yellow_trips_2017
+,my_tagged_entry_linked_resource,my_template_2,my_tag_2,my_col,pii_type,ENUM,NONE
+,my_tagged_entry_linked_resource,my_template_2,my_tag_2,my_col,has_pii,BOOL,False

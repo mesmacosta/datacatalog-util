@@ -1,0 +1,3 @@
+template_name,tags_count,tagged_entries_count,tagged_columns_count,tag_string_fields_count,tag_bool_fields_count,tag_double_fields_count,tag_timestamp_fields_count,tag_enum_fields_count
+my_template,1,0,1,1,1,1,1,1
+my_template_2,1,0,1,1,1,1,1,1
