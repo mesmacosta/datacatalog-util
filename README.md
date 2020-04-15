@@ -13,8 +13,8 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | ---            | ---                            | ---                                                 | ---                | ---       |
 | `tags`         |**create**                      | Load Tags from CSV file.                            | [GO][12]           | [GO][18]  |
 | `tags`         |**export**                      | Export Tags to CSV file.                            | [GO][13]           | [GO][17]  |
-| `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][17]  |
-| `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][17]  |
+| `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][24]  |
+| `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][24]  |
 | `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][17]  |
 | `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
 | `filesets`     |**clean-up-templates-and-tags** | Cleans up Fileset Templates and Tags.               | [GO][21]           | [GO][19]  |
@@ -277,3 +277,4 @@ datacatalog-util filesets --project-ids my-project clean-up-all
 [21]: https://github.com/mesmacosta/datacatalog-util#62-clean-up-template-and-tags
 [22]: https://github.com/mesmacosta/datacatalog-util#63--clean-up-all-non-reversible-be-careful
 [23]: https://github.com/mesmacosta/datacatalog-fileset-enricher#1-created-tags
+[24]: https://github.com/mesmacosta/datacatalog-tag-template-processor
