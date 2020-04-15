@@ -1,4 +1,4 @@
-"""Top-level package for bq-properties-creator."""
+"""Top-level package for datacatalog_util."""
 
 from .datacatalog_util_cli import main  # noqa: F401
 
