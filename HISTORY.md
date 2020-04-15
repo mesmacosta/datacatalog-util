@@ -15,3 +15,13 @@
 ------------------
 
 * Improved groups command line.
+
+0.3.0 (2020-04-15)
+------------------
+
+* Added datacatalog-tag-template-processor library.
+
+0.4.0 (2020-04-15)
+------------------
+
+* Added datacatalog-tag-template-exporter library.

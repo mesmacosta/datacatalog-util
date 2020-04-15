@@ -1,7 +1,6 @@
 import unittest
 from unittest import mock
 
-from google.api_core import exceptions
 from google.cloud.datacatalog import types
 
 from datacatalog_util import datacatalog_facade
@@ -67,48 +66,6 @@ class DataCatalogFacadeTest(unittest.TestCase):
 
         self.assertEqual(1, datacatalog.search_catalog.call_count)
         self.assertEqual(expected_return_value, return_value)
-
-    def test_get_tag_templates_from_search_results_should_return_values(self):
-        entry = MockedObject()
-        entry.name = 'asset_1'
-        entry.relative_resource_name = 'asset_1_resource_name'
-
-        entry_2 = MockedObject()
-        entry_2.name = 'asset_2'
-        entry_2.relative_resource_name = 'asset_2_resource_name'
-
-        search_results = [entry, entry_2]
-
-        datacatalog = self.__datacatalog_client
-        datacatalog.get_tag_template.return_value = {}
-
-        return_value = self.__datacatalog_facade.get_tag_templates_from_search_results(
-            search_results)
-
-        self.assertEqual(2, datacatalog.get_tag_template.call_count)
-        self.assertEqual([{}, {}], return_value)
-
-    def test_get_tag_templates_err_from_search_results_should_return_values(self):
-        entry = MockedObject()
-        entry.name = 'asset_1'
-        entry.relative_resource_name = 'asset_1_resource_name'
-
-        entry_2 = MockedObject()
-        entry_2.name = 'asset_2'
-        entry_2.relative_resource_name = 'asset_2_resource_name'
-
-        search_results = [entry, entry_2]
-
-        datacatalog = self.__datacatalog_client
-        datacatalog.get_tag_template.side_effect = [
-            {}, exceptions.GoogleAPICallError('Permission denied')
-        ]
-
-        return_value = self.__datacatalog_facade.get_tag_templates_from_search_results(
-            search_results)
-
-        self.assertEqual(2, datacatalog.get_tag_template.call_count)
-        self.assertEqual([{}], return_value)
 
     def test_extract_resources_from_template_should_return_values(self):
         resource_name = 'projects/my-project/locations/us-central1/tagTemplates/my-template'

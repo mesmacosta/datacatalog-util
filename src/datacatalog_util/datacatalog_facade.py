@@ -2,7 +2,6 @@ import logging
 from functools import lru_cache
 import re
 
-from google.api_core import exceptions
 from google.cloud import datacatalog
 from google.cloud import datacatalog_v1beta1
 
@@ -65,19 +64,6 @@ class DataCatalogFacade:
         tag_template = self.__datacatalog.get_tag_template(name=name)
         self.__log_single_object_read_result(tag_template)
         return tag_template
-
-    def get_tag_templates_from_search_results(self, search_results):
-        tag_templates = []
-
-        for search_result in search_results:
-            template_name = search_result.relative_resource_name
-            try:
-                tag_template = self.get_tag_template(template_name)
-                tag_templates.append(tag_template)
-            except exceptions.GoogleAPICallError as e:
-                logging.warning('Exception getting Tag Template %s: %s', template_name, str(e))
-
-        return tag_templates
 
     @classmethod
     def extract_resources_from_template(cls, tag_template_name):
