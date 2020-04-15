@@ -27,7 +27,8 @@ setuptools.setup(
         'pandas',
         'tabulate',
         'datacatalog-tag-manager',
-        'datacatalog-fileset-enricher'
+        'datacatalog-fileset-enricher',
+        'datacatalog-tag-template-processor',
     ),
     setup_requires=('pytest-runner', ),
     tests_require=('pytest-cov', ),

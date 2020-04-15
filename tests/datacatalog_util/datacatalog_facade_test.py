@@ -18,19 +18,6 @@ class DataCatalogFacadeTest(unittest.TestCase):
     def test_constructor_should_set_instance_attributes(self):
         self.assertIsNotNone(self.__datacatalog_facade.__dict__['_DataCatalogFacade__datacatalog'])
 
-    def test_create_tag_template_should_succeed(self):
-        self.__datacatalog_facade.create_tag_template('test-project', 'location-id',
-                                                      'tag_template_id', {})
-
-        datacatalog = self.__datacatalog_client
-        self.assertEqual(1, datacatalog.create_tag_template.call_count)
-
-    def test_delete_tag_template_should_succeed(self):
-        self.__datacatalog_facade.delete_tag_template('tag_template_name')
-
-        datacatalog = self.__datacatalog_client
-        self.assertEqual(1, datacatalog.delete_tag_template.call_count)
-
     def test_get_tag_template_should_call_client_library_method(self):
         self.__datacatalog_facade.get_tag_template(None)
 

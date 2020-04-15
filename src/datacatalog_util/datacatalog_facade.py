@@ -16,15 +16,6 @@ class DataCatalogFacade:
         # Initialize the API client.
         self.__datacatalog = datacatalog.DataCatalogClient()
 
-    def create_tag_template(self, project_id, location_id, tag_template_id, tag_template):
-        return self.__datacatalog.create_tag_template(
-            parent=datacatalog.DataCatalogClient.location_path(project_id, location_id),
-            tag_template_id=tag_template_id,
-            tag_template=tag_template)
-
-    def delete_tag_template(self, name):
-        self.__datacatalog.delete_tag_template(name=name, force=True)
-
     def list_tags(self, entry_name):
         return self.__list_tags(entry_name)
 
