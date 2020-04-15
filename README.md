@@ -12,7 +12,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | Group          | Command                        | Description                                         | Documentation Link | Code Repo |
 | ---            | ---                            | ---                                                 | ---                | ---       |
 | `tags`         |**create**                      | Load Tags from CSV file.                            | [GO][12]           | [GO][18]  |
-| `tags`         |**export**                      | Export Tags to CSV file.                            | [GO][13]           | [GO][17]  |
+| `tags`         |**export**                      | Export Tags to CSV file.                            | [GO][13]           | [GO][26]  |
 | `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][24]  |
 | `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][24]  |
 | `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][25]  |
@@ -279,3 +279,5 @@ datacatalog-util filesets --project-ids my-project clean-up-all
 [23]: https://github.com/mesmacosta/datacatalog-fileset-enricher#1-created-tags
 [24]: https://github.com/mesmacosta/datacatalog-tag-template-processor
 [25]: https://github.com/mesmacosta/datacatalog-tag-template-exporter
+[26]: https://github.com/mesmacosta/datacatalog-tag-exporter
+
