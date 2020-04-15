@@ -25,3 +25,8 @@
 ------------------
 
 * Added datacatalog-tag-template-exporter library.
+
+0.5.0 (2020-04-15)
+------------------
+
+* Added datacatalog-tag-exporter library.

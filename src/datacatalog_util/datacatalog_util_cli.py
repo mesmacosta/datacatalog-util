@@ -3,11 +3,10 @@ import logging
 import sys
 
 from datacatalog_fileset_enricher import datacatalog_fileset_enricher
+from datacatalog_tag_exporter import tag_datasource_exporter
 from datacatalog_tag_manager import tag_datasource_processor
 from datacatalog_tag_template_exporter import tag_template_datasource_exporter
 from datacatalog_tag_template_processor import tag_template_datasource_processor
-
-from datacatalog_util import tag_datasource_exporter
 
 
 class DatacatalogUtilsCLI:

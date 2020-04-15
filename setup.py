@@ -23,10 +23,8 @@ setuptools.setup(
     },
     include_package_data=True,
     install_requires=(
-        'google-cloud-datacatalog',
-        'pandas',
-        'tabulate',
         'datacatalog-tag-manager',
+        'datacatalog-tag-exporter',
         'datacatalog-fileset-enricher',
         'datacatalog-tag-template-processor',
         'datacatalog-tag-template-exporter',
