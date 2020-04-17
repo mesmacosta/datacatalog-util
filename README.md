@@ -237,14 +237,30 @@ Users are able to choose the Tag fields from the list provided at [Tags][23]
 datacatalog-util filesets --project-ids my-project enrich
 ```
 
-### 6.2. clean up template and tags
+### 6.1.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
+Check step below to see how to create the template in a different project.
+
+```bash
+datacatalog-util filesets --project-id my_project \
+  enrich --tag-template-name projects/my_different_project/locations/us-central1/tagTemplates/fileset_enricher_findings
+```
+
+### 6.2. Create Fileset Enricher Tag Template in a different Project 
+Creates the fileset enricher template in chosen project.
+
+```bash
+datacatalog-util filesets --project-id my_different_project \
+    create-template
+```
+
+### 6.3. clean up template and tags
 Cleans up the Template and Tags from the Fileset Entries, running the main command will recreate those.
 
 ```bash
 datacatalog-util filesets --project-ids my-project clean-up-templates-and-tags 
 ```
 
-### 6.3.  clean up all (Non Reversible, be careful)
+### 6.4.  clean up all (Non Reversible, be careful)
 Cleans up the Fileset Entries, Template and Tags. You have to re create the Fileset entries if you need to restore the state,
 which is outside the scope of this script.
 

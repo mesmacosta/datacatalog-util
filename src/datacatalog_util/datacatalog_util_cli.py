@@ -97,6 +97,12 @@ class DatacatalogUtilsCLI:
         enrich_filesets = filesets_subparsers.add_parser('enrich',
                                                          help='Enrich GCS filesets with Tags')
 
+        enrich_filesets.add_argument('--tag-template-name',
+                                     help='Name of the Fileset Enrich template,'
+                                     'i.e: '
+                                     'projects/my-project/locations/us-central1/tagTemplates/'
+                                     'my_template_test')
+
         enrich_filesets.add_argument('--entry-group-id', help='Entry Group ID')
         enrich_filesets.add_argument('--entry-id', help='Entry ID')
         enrich_filesets.add_argument('--tag-fields',
@@ -106,6 +112,15 @@ class DatacatalogUtilsCLI:
                                      help='Specify a bucket prefix if you want to avoid scanning'
                                      ' too many GCS buckets')
         enrich_filesets.set_defaults(func=cls.__enrich_fileset)
+
+        create_template = filesets_subparsers.add_parser('create-template',
+                                                         help='Create the Fileset Enrich template')
+
+        create_template.add_argument('--location',
+                                     help='Location of the Fileset Enrich template',
+                                     default='us-central1')
+
+        create_template.set_defaults(func=cls.__create_fileset_template)
 
         clean_up_tags = filesets_subparsers.add_parser(
             'clean-up-templates-and-tags',
@@ -150,7 +165,8 @@ class DatacatalogUtilsCLI:
             tag_fields = args.tag_fields.split(',')
 
         datacatalog_fileset_enricher.DatacatalogFilesetEnricher(args.project_id).run(
-            args.entry_group_id, args.entry_id, tag_fields, args.bucket_prefix)
+            args.entry_group_id, args.entry_id, tag_fields, args.bucket_prefix,
+            args.tag_template_name)
 
     @classmethod
     def __clean_up_fileset_template_and_tags(cls, args):
@@ -165,6 +181,11 @@ class DatacatalogUtilsCLI:
     def __create_tags(cls, args):
         tag_datasource_processor.TagDatasourceProcessor().create_tags_from_csv(
             file_path=args.csv_file)
+
+    @classmethod
+    def __create_fileset_template(cls, args):
+        datacatalog_fileset_enricher.DatacatalogFilesetEnricher(args.project_id).create_template(
+            args.location)
 
     @classmethod
     def __create_tag_templates(cls, args):
