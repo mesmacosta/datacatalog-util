@@ -72,6 +72,12 @@ class DatacatalogUtilsCLI:
                                         help='Project ids to narrow down Templates list,'
                                         'split by comma',
                                         required=True)
+        export_tags_parser.add_argument('--tag-templates-names',
+                                        help='Templates names to narrow down Templates list,'
+                                        'split by comma'
+                                        'i.e: '
+                                        'projects/my-project/locations/us-central1/tagTemplates/'
+                                        'my_template_test')
         export_tags_parser.set_defaults(func=cls.__export_tags)
 
     @classmethod
@@ -204,8 +210,10 @@ class DatacatalogUtilsCLI:
 
     @classmethod
     def __export_tags(cls, args):
-        tag_datasource_exporter.TagDatasourceExporter().export_tags(project_ids=args.project_ids,
-                                                                    dir_path=args.dir_path)
+        tag_datasource_exporter.TagDatasourceExporter().export_tags(
+            project_ids=args.project_ids,
+            dir_path=args.dir_path,
+            tag_templates_names=args.tag_templates_names)
 
 
 def main():

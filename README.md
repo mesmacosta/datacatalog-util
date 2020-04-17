@@ -169,6 +169,18 @@ The columns for each template file are described as follows:
 datacatalog-util tags export --project-ids my-project --dir-path DIR_PATH
 ```
 
+### 3.3 Run the datacatalog-tag-exporter filtering Tag Templates
+
+- Python + virtualenv
+
+```bash
+datacatalog-util tags export --project-ids my-project \
+--dir-path DIR_PATH \
+--tag-templates-names projects/my-project/locations/us-central1/tagTemplates/my-template,\
+projects/my-project/locations/us-central1/tagTemplates/my-template-2 
+
+```
+
 ## 4. Load Templates from CSV file
 
 ### 4.1. Create a CSV file representing the Templates to be created
