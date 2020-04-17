@@ -161,7 +161,7 @@ The columns for each template file are described as follows:
 | **field_type**             | Type of the Tag field.                                 | 
 | **field_value**            | Value of the Tag field.                                | 
 
-### 3.2. Run the datacatalog-util script
+### 3.2. Run tags export
 
 - Python + virtualenv
 
@@ -169,7 +169,7 @@ The columns for each template file are described as follows:
 datacatalog-util tags export --project-ids my-project --dir-path DIR_PATH
 ```
 
-### 3.3 Run the datacatalog-tag-exporter filtering Tag Templates
+### 3.3 Run tags export filtering Tag Templates
 
 - Python + virtualenv
 
