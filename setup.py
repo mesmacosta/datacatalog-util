@@ -26,6 +26,7 @@ setuptools.setup(
         'datacatalog-tag-manager',
         'datacatalog-tag-exporter',
         'datacatalog-fileset-enricher',
+        'datacatalog-fileset-processor',
         'datacatalog-tag-template-processor',
         'datacatalog-tag-template-exporter',
     ),
