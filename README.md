@@ -18,7 +18,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][25]  |
 | `filesets`     |**create**                      | Create GCS filesets from CSV file.                  | [GO][29]           | [GO][28]  |
 | `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
-| `filesets`     |**clean-up-templates-and-tags** | Cleans up Fileset Templates and Tags.               | [GO][21]           | [GO][19]  |
+| `filesets`     |**clean-up-templates-and-tags** | Cleans up the Fileset Template and their Tags.               | [GO][21]           | [GO][19]  |
 | `filesets`     |**delete**                      | Delete GCS filesets from CSV file.                  | [GO][30]           | [GO][28]  |
 
 ## Executing in Cloud Shell
