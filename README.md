@@ -18,7 +18,6 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][25]  |
 | `filesets`     |**create**                      | Create GCS filesets from CSV file.                  | [GO][29]           | [GO][28]  |
 | `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
-| `filesets`     |**create-template**             | Create Filesets Template in chosen Project.         | [GO][27]           | [GO][19]  |
 | `filesets`     |**clean-up-templates-and-tags** | Cleans up Fileset Templates and Tags.               | [GO][21]           | [GO][19]  |
 | `filesets`     |**delete**                      | Delete GCS filesets from CSV file.                  | [GO][30]           | [GO][28]  |
 
@@ -279,29 +278,24 @@ datacatalog-util filesets --project-id my-project enrich
 ```
 
 ### 6.2.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
-Check step below to see how to create the template in a different project.
+
+If you are using a different project, make sure the Service Account has the following permissions on that project:
+* Data Catalog TagTemplate Creator
+* Data Catalog TagTemplate User
 
 ```bash
 datacatalog-util filesets --project-id my_project \
   enrich --tag-template-name projects/my_different_project/locations/us-central1/tagTemplates/fileset_enricher_findings
 ```
 
-### 6.3. Create Fileset Enricher Tag Template in a different Project 
-Creates the fileset enricher template in chosen project.
-
-```bash
-datacatalog-util filesets --project-id my_different_project \
-    create-template
-```
-
-### 6.4. clean up template and tags
+### 6.3. clean up template and tags
 Cleans up the Template and Tags from the Fileset Entries, running the main command will recreate those.
 
 ```bash
 datacatalog-util filesets --project-ids my-project clean-up-templates-and-tags 
 ```
 
-### 6.5. Delete the Filesets Entry Groups and Entries
+### 6.4. Delete the Filesets Entry Groups and Entries
 
 - Python + virtualenv
 
