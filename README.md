@@ -16,11 +16,11 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][24]  |
 | `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][24]  |
 | `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][25]  |
-| `filesets`     |**create**                      | Create GCS filesets from CSV file.                  | [GO][20]           | [GO][28]  |
+| `filesets`     |**create**                      | Create GCS filesets from CSV file.                  | [GO][29]           | [GO][28]  |
 | `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
 | `filesets`     |**create-template**             | Create Filesets Template in chosen Project.         | [GO][27]           | [GO][19]  |
 | `filesets`     |**clean-up-templates-and-tags** | Cleans up Fileset Templates and Tags.               | [GO][21]           | [GO][19]  |
-| `filesets`     |**delete**                      | Delete GCS filesets from CSV file.                  | [GO][20]           | [GO][28]  |
+| `filesets`     |**delete**                      | Delete GCS filesets from CSV file.                  | [GO][30]           | [GO][28]  |
 
 ## Executing in Cloud Shell
 ````bash
@@ -263,19 +263,19 @@ described as follows:
 | **schema_column_mode**        | Schema column mode.       | N         |
 
 
-### 6.1.1. Run the datacatalog-fileset-processor script - Create the Filesets Entry Groups and Entries
+### 6.1.1. Create the Filesets Entry Groups and Entries
 
 - Python + virtualenv
 
 ```bash
-datacatalog-fileset-processor filesets create --csv-file CSV_FILE_PATH
+datacatalog-util filesets --project-ids my-project create --csv-file CSV_FILE_PATH
 ```
 
 ### 6.2. Enrich GCS Filesets with Tags
 Users are able to choose the Tag fields from the list provided at [Tags][23]
 
 ```bash
-datacatalog-util filesets --project-ids my-project enrich
+datacatalog-util filesets --project-id my-project enrich
 ```
 
 ### 6.2.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
@@ -301,12 +301,12 @@ Cleans up the Template and Tags from the Fileset Entries, running the main comma
 datacatalog-util filesets --project-ids my-project clean-up-templates-and-tags 
 ```
 
-### 6.5. Run the datacatalog-fileset-processor script - Delete the Filesets Entry Groups and Entries
+### 6.5. Delete the Filesets Entry Groups and Entries
 
 - Python + virtualenv
 
 ```bash
-datacatalog-fileset-processor filesets delete --csv-file CSV_FILE_PATH
+datacatalog-util filesets --project-ids my-project delete --csv-file CSV_FILE_PATH
 ```
 
 
@@ -338,3 +338,5 @@ datacatalog-fileset-processor filesets delete --csv-file CSV_FILE_PATH
 [26]: https://github.com/mesmacosta/datacatalog-tag-exporter
 [27]: https://github.com/mesmacosta/datacatalog-util#62-create-fileset-enricher-tag-template-in-a-different-project
 [28]: https://github.com/mesmacosta/datacatalog-fileset-processor
+[29]: https://github.com/mesmacosta/datacatalog-util/blob/master/README.md#611-run-the-datacatalog-fileset-processor-script---create-the-filesets-entry-groups-and-entries
+[30]: https://github.com/mesmacosta/datacatalog-util#65-run-the-datacatalog-fileset-processor-script---delete-the-filesets-entry-groups-and-entries
