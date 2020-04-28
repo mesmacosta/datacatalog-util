@@ -65,20 +65,20 @@ class DatacatalogUtilsCLI:
     def add_export_tags_cmd(cls, subparsers):
         export_tags_parser = subparsers.add_parser('export',
                                                    help='Export Tags to CSV,'
-                                                        ' creates one file'
-                                                        ' for each teamplate')
+                                                   ' creates one file'
+                                                   ' for each teamplate')
         export_tags_parser.add_argument('--dir-path',
                                         help='Directory path where files will be exported')
         export_tags_parser.add_argument('--project-ids',
                                         help='Project ids to narrow down Templates list,'
-                                             'split by comma',
+                                        'split by comma',
                                         required=True)
         export_tags_parser.add_argument('--tag-templates-names',
                                         help='Templates names to narrow down Templates list,'
-                                             'split by comma'
-                                             'i.e: '
-                                             'projects/my-project/locations/us-central1/tagTemplates/'
-                                             'my_template_test')
+                                        'split by comma'
+                                        'i.e: '
+                                        'projects/my-project/locations/us-central1/tagTemplates/'
+                                        'my_template_test')
         export_tags_parser.set_defaults(func=cls.__export_tags)
 
     @classmethod
@@ -89,7 +89,7 @@ class DatacatalogUtilsCLI:
                                                  help='File path where file will be exported')
         export_tag_templates_parser.add_argument('--project-ids',
                                                  help='Project ids to narrow down Templates list,'
-                                                      'split by comma',
+                                                 'split by comma',
                                                  required=True)
         export_tag_templates_parser.set_defaults(func=cls.__export_tag_templates)
 
@@ -103,30 +103,29 @@ class DatacatalogUtilsCLI:
 
         create_filesets_parser = filesets_subparsers.add_parser('create',
                                                                 help='Create Tag Templates '
-                                                                     'from CSV')
+                                                                'from CSV')
         create_filesets_parser.add_argument('--csv-file',
                                             help='CSV file with Tag Templates information',
                                             required=True)
-        create_filesets_parser.set_defaults(
-            func=cls.__create_filesets_entry_groups_and_entries)
+        create_filesets_parser.set_defaults(func=cls.__create_filesets_entry_groups_and_entries)
 
         enrich_filesets = filesets_subparsers.add_parser('enrich',
                                                          help='Enrich GCS filesets with Tags')
 
         enrich_filesets.add_argument('--tag-template-name',
                                      help='Name of the Fileset Enrich template,'
-                                          'i.e: '
-                                          'projects/my-project/locations/us-central1/tagTemplates/'
-                                          'my_template_test')
+                                     'i.e: '
+                                     'projects/my-project/locations/us-central1/tagTemplates/'
+                                     'my_template_test')
 
         enrich_filesets.add_argument('--entry-group-id', help='Entry Group ID')
         enrich_filesets.add_argument('--entry-id', help='Entry ID')
         enrich_filesets.add_argument('--tag-fields',
                                      help='Specify the fields you want on the generated Tags,'
-                                          ' split by comma, use the list available in the docs')
+                                     ' split by comma, use the list available in the docs')
         enrich_filesets.add_argument('--bucket-prefix',
                                      help='Specify a bucket prefix if you want to avoid scanning'
-                                          ' too many GCS buckets')
+                                     ' too many GCS buckets')
         enrich_filesets.set_defaults(func=cls.__enrich_fileset)
 
         create_template = filesets_subparsers.add_parser('create-template',
@@ -145,7 +144,7 @@ class DatacatalogUtilsCLI:
 
         delete_filesets_parser = filesets_subparsers.add_parser('delete',
                                                                 help='Delete Filesets Entry Groups'
-                                                                     ' and Entries from CSV')
+                                                                ' and Entries from CSV')
         delete_filesets_parser.add_argument('--csv-file',
                                             help='CSV file with Fileset Entries information',
                                             required=True)

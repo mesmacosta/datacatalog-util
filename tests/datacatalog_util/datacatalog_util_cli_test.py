@@ -85,25 +85,21 @@ class TagManagerCLITest(unittest.TestCase):
         tag_datasource_processor.export_tags.assert_called_with(
             project_ids='my-project1,my-project2', dir_path='test.csv', tag_templates_names=None)
 
-    @mock.patch(
-        'datacatalog_util.datacatalog_util_cli.'
-        'datacatalog_fileset_enricher.DatacatalogFilesetEnricher')
+    @mock.patch('datacatalog_util.datacatalog_util_cli.'
+                'datacatalog_fileset_enricher.DatacatalogFilesetEnricher')
     def test_run_filesets_enrich_should_call_correct_method(self, mock_fileset_enricher):
-        datacatalog_util_cli.DatacatalogUtilsCLI.run([
-            'filesets', '--project-id', 'my-project1', 'enrich'
-        ])
+        datacatalog_util_cli.DatacatalogUtilsCLI.run(
+            ['filesets', '--project-id', 'my-project1', 'enrich'])
 
         mock_fileset_enricher_processor = mock_fileset_enricher.return_value
         mock_fileset_enricher_processor.run.assert_called_once()
         mock_fileset_enricher_processor.run.assert_called_with(None, None, None, None, None)
 
-    @mock.patch(
-        'datacatalog_util.datacatalog_util_cli.'
-        'fileset_datasource_processor.FilesetDatasourceProcessor')
+    @mock.patch('datacatalog_util.datacatalog_util_cli.'
+                'fileset_datasource_processor.FilesetDatasourceProcessor')
     def test_run_filesets_create_should_call_correct_method(self, mock_fileset_create):
-        datacatalog_util_cli.DatacatalogUtilsCLI.run([
-            'filesets', '--project-id', 'my-project1', 'create', '--csv-file', 'test.csv'
-        ])
+        datacatalog_util_cli.DatacatalogUtilsCLI.run(
+            ['filesets', '--project-id', 'my-project1', 'create', '--csv-file', 'test.csv'])
 
         mock_fileset_datasource_processor = mock_fileset_create.return_value
         mock_fileset_datasource_processor.create_entry_groups_and_entries_from_csv.\
@@ -111,13 +107,11 @@ class TagManagerCLITest(unittest.TestCase):
         mock_fileset_datasource_processor.create_entry_groups_and_entries_from_csv(
             file_path='test.csv')
 
-    @mock.patch(
-        'datacatalog_util.datacatalog_util_cli.'
-        'fileset_datasource_processor.FilesetDatasourceProcessor')
+    @mock.patch('datacatalog_util.datacatalog_util_cli.'
+                'fileset_datasource_processor.FilesetDatasourceProcessor')
     def test_run_filesets_delete_should_call_correct_method(self, mock_fileset_delete):
-        datacatalog_util_cli.DatacatalogUtilsCLI.run([
-            'filesets', '--project-id', 'my-project1', 'delete', '--csv-file', 'test.csv'
-        ])
+        datacatalog_util_cli.DatacatalogUtilsCLI.run(
+            ['filesets', '--project-id', 'my-project1', 'delete', '--csv-file', 'test.csv'])
 
         mock_fileset_datasource_processor = mock_fileset_delete.return_value
         mock_fileset_datasource_processor.delete_entry_groups_and_entries_from_csv.\
