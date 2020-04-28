@@ -30,3 +30,8 @@
 ------------------
 
 * Added datacatalog-tag-exporter library.
+
+0.6.0 (2020-04-28)
+------------------
+
+* Added datacatalog-fileset-processor library.
