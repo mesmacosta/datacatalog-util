@@ -267,7 +267,7 @@ described as follows:
 - Python + virtualenv
 
 ```bash
-datacatalog-util filesets --project-ids my-project create --csv-file CSV_FILE_PATH
+datacatalog-util filesets --project-id my-project create --csv-file CSV_FILE_PATH
 ```
 
 ### 6.2. Enrich GCS Filesets with Tags
@@ -292,7 +292,7 @@ datacatalog-util filesets --project-id my_project \
 Cleans up the Template and Tags from the Fileset Entries, running the main command will recreate those.
 
 ```bash
-datacatalog-util filesets --project-ids my-project clean-up-templates-and-tags 
+datacatalog-util filesets --project-id my-project clean-up-templates-and-tags 
 ```
 
 ### 6.4. Delete the Filesets Entry Groups and Entries
@@ -300,7 +300,7 @@ datacatalog-util filesets --project-ids my-project clean-up-templates-and-tags
 - Python + virtualenv
 
 ```bash
-datacatalog-util filesets --project-ids my-project delete --csv-file CSV_FILE_PATH
+datacatalog-util filesets --project-id my-project delete --csv-file CSV_FILE_PATH
 ```
 
 
