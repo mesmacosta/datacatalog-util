@@ -288,7 +288,7 @@ datacatalog-util filesets enrich --project-id my-project
 
 ### 6.2.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
 
-If you are using a different project, make sure the Service Account has the following permissions on that project:
+If you are using a different Project, make sure the Service Account has the following permissions on that Project or that Template:
 * Data Catalog TagTemplate Creator
 * Data Catalog TagTemplate User
 
