@@ -12,13 +12,14 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | Group          | Command                        | Description                                         | Documentation Link | Code Repo |
 | ---            | ---                            | ---                                                 | ---                | ---       |
 | `tags`         |**create**                      | Load Tags from CSV file.                            | [GO][12]           | [GO][18]  |
+| `tags`         |**delete**                      | Delete Tags fromCSV file.                           | [GO][13]           | [GO][26]  |
 | `tags`         |**export**                      | Export Tags to CSV file.                            | [GO][13]           | [GO][26]  |
 | `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][24]  |
 | `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][24]  |
 | `tag-templates`|**export**                      | Export Templates to CSV file.                       | [GO][16]           | [GO][25]  |
 | `filesets`     |**create**                      | Create GCS filesets from CSV file.                  | [GO][29]           | [GO][28]  |
 | `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
-| `filesets`     |**clean-up-templates-and-tags** | Cleans up the Fileset Template and their Tags.               | [GO][21]           | [GO][19]  |
+| `filesets`     |**clean-up-templates-and-tags** | Cleans up the Fileset Template and their Tags.      | [GO][21]           | [GO][19]  |
 | `filesets`     |**delete**                      | Delete GCS filesets from CSV file.                  | [GO][30]           | [GO][28]  |
 
 ## Executing in Cloud Shell
@@ -111,7 +112,7 @@ described as follows:
 - [sample-input/create-tags][4] for reference;
 - [Data Catalog Sample Tags][5] (Google Sheets) may help to create/export the CSV.
 
-### 2.2. Run the datacatalog-util script
+### 2.2. Run the datacatalog-util script - Create the Tags
 
 - Python + virtualenv
 
@@ -126,6 +127,14 @@ docker build --rm --tag datacatalog-util .
 docker run --rm --tty \
   --volume CREDENTIALS_FILE_FOLDER:/credentials --volume CSV_FILE_FOLDER:/data \
   datacatalog-util create-tags --csv-file /data/CSV_FILE_NAME
+```
+
+### 2.3. Run the datacatalog-util script - Delete the Tags
+
+- Python + virtualenv
+
+```bash
+datacatalog-util tags delete --csv-file CSV_FILE_PATH
 ```
 
 ## 3. Export Tags to CSV file
