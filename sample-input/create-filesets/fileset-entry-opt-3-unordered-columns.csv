@@ -1,0 +1,3 @@
+entry_id,schema_column_type,entry_group_display_name,schema_column_description,entry_group_description,entry_file_patterns,schema_column_mode,entry_description,entry_group_name,schema_column_name,entry_display_name
+entry_test,,My Fileset Entry Group,,,gs://bucket_13c4/*,,,projects/my-project/locations/us-central1/entryGroups/entry_group_test_1,,My Fileset
+entry_test,,My Fileset Entry Group 2,,,gs://bucket_13c4/*|gs://bucket_23c4/*,,,projects/my-project/locations/us-central1/entryGroups/entry_group_test_2,,My Fileset

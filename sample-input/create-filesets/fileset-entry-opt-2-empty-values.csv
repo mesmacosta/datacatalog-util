@@ -1,0 +1,6 @@
+entry_group_name,entry_group_display_name,entry_group_description,entry_id,entry_display_name,entry_description,entry_file_patterns,schema_column_name,schema_column_type,schema_column_description,schema_column_mode
+projects/my-project/locations/us-central1/entryGroups/entry_group_test_1,My Fileset Entry Group,,entry_test,My Fileset,,gs://bucket_13c4/*,,,,
+projects/my-project/locations/us-central1/entryGroups/entry_group_test_2,My Fileset Entry Group 2,,entry_test,My Fileset,,gs://bucket_13c4/*|gs://bucket_23c4/*,,,,
+,,,entry_test,My Fileset,,gs://bucket_13c4/*|gs://bucket_23c4/*,column_1,STRING,String Column,REQUIRED
+,,,entry_test,My Fileset,,gs://bucket_13c4/*|gs://bucket_23c4/*,column_1,DOUBLE,Double Column,REQUIRED
+,,,entry_test_2,My Fileset 2,,gs://bucket_2,,,,
