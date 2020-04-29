@@ -21,6 +21,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
 | `filesets`     |**clean-up-templates-and-tags** | Cleans up the Fileset Template and their Tags.      | [GO][21]           | [GO][19]  |
 | `filesets`     |**delete**                      | Delete GCS filesets from CSV file.                  | [GO][30]           | [GO][28]  |
+| `filesets`     |**export**                      | Export Filesets to CSV file.                        | [GO][30]           | [GO][33]  |
 
 ## Executing in Cloud Shell
 ````bash
@@ -316,6 +317,34 @@ datacatalog-util filesets clean-up-templates-and-tags --project-id my-project
 datacatalog-util filesets delete --project-id my-project  --csv-file CSV_FILE_PATH
 ```
 
+## 7. Export Filesets to CSV file
+
+### 7.1. A CSV file representing the Filesets will be created
+
+Filesets are composed of as many lines as required to represent all of their fields. The columns are
+described as follows:
+
+| Column                        | Description               | Mandatory |
+| ---                           | ---                       | ---       |
+| **entry_group_name**          | Entry Group Name.         | Y         |
+| **entry_group_display_name**  | Entry Group Display Name. | Y         |
+| **entry_group_description**   | Entry Group Description.  | Y         |
+| **entry_id**                  | Entry ID.                 | Y         |
+| **entry_display_name**        | Entry Display Name.       | Y         |
+| **entry_description**         | Entry Description.        | Y         |
+| **entry_file_patterns**       | Entry File Patterns.      | Y         |
+| **schema_column_name**        | Schema column name.       | N         |
+| **schema_column_type**        | Schema column type.       | N         |
+| **schema_column_description** | Schema column description.| N         |
+| **schema_column_mode**        | Schema column mode.       | N         |
+
+### 7.2. Run the datacatalog-util script
+
+- Python + virtualenv
+
+```bash
+datacatalog-util filesets export --project-ids my-project --file-path CSV_FILE_PATH
+```
 
 [1]: https://circleci.com/gh/mesmacosta/datacatalog-util.svg?style=svg
 [2]: https://circleci.com/gh/mesmacosta/datacatalog-util
@@ -348,4 +377,5 @@ datacatalog-util filesets delete --project-id my-project  --csv-file CSV_FILE_PA
 [30]: https://github.com/mesmacosta/datacatalog-util#64-delete-the-filesets-entry-groups-and-entries
 [31]: https://github.com/mesmacosta/datacatalog-util#23-run-the-datacatalog-util-script---delete-the-tags
 [32]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-filesets
+[33]: https://github.com/mesmacosta/datacatalog-fileset-exporter
 
