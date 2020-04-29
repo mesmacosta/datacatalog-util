@@ -40,3 +40,8 @@
 ------------------
 
 * Added new tag delete command.
+
+0.8.0 (2020-04-29)
+------------------
+
+* Added new fileset export command.
