@@ -35,3 +35,8 @@
 ------------------
 
 * Added datacatalog-fileset-processor library.
+
+0.7.0 (2020-04-29)
+------------------
+
+* Added new tag delete command.
