@@ -267,14 +267,14 @@ described as follows:
 - Python + virtualenv
 
 ```bash
-datacatalog-util filesets --project-id my-project create --csv-file CSV_FILE_PATH
+datacatalog-util filesets create --project-id my-project  --csv-file CSV_FILE_PATH
 ```
 
 ### 6.2. Enrich GCS Filesets with Tags
 Users are able to choose the Tag fields from the list provided at [Tags][23]
 
 ```bash
-datacatalog-util filesets --project-id my-project enrich
+datacatalog-util filesets enrich --project-id my-project 
 ```
 
 ### 6.2.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
@@ -284,7 +284,8 @@ If you are using a different project, make sure the Service Account has the foll
 * Data Catalog TagTemplate User
 
 ```bash
-datacatalog-util filesets --project-id my_project \
+datacatalog-util filesets \
+  --project-id my_project \
   enrich --tag-template-name projects/my_different_project/locations/us-central1/tagTemplates/fileset_enricher_findings
 ```
 
@@ -292,7 +293,7 @@ datacatalog-util filesets --project-id my_project \
 Cleans up the Template and Tags from the Fileset Entries, running the main command will recreate those.
 
 ```bash
-datacatalog-util filesets --project-id my-project clean-up-templates-and-tags 
+datacatalog-util filesets clean-up-templates-and-tags --project-id my-project 
 ```
 
 ### 6.4. Delete the Filesets Entry Groups and Entries
@@ -300,7 +301,7 @@ datacatalog-util filesets --project-id my-project clean-up-templates-and-tags
 - Python + virtualenv
 
 ```bash
-datacatalog-util filesets --project-id my-project delete --csv-file CSV_FILE_PATH
+datacatalog-util filesets delete --project-id my-project  --csv-file CSV_FILE_PATH
 ```
 
 

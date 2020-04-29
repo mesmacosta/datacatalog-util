@@ -46,6 +46,8 @@ class DatacatalogUtilsCLI:
 
         cls.add_create_tags_cmd(tags_subparsers)
 
+        cls.add_delete_tags_cmd(tags_subparsers)
+
         cls.add_export_tags_cmd(tags_subparsers)
 
     @classmethod
@@ -97,13 +99,13 @@ class DatacatalogUtilsCLI:
     def add_fileset_enricher_cmd(cls, subparsers):
         filesets_parser = subparsers.add_parser("filesets", help="Filesets commands")
 
-        filesets_parser.add_argument('--project-id', help='Project id', required=True)
-
         filesets_subparsers = filesets_parser.add_subparsers()
 
         create_filesets_parser = filesets_subparsers.add_parser('create',
                                                                 help='Create Tag Templates '
                                                                 'from CSV')
+
+        create_filesets_parser.add_argument('--project-id', help='Project id', required=True)
         create_filesets_parser.add_argument('--csv-file',
                                             help='CSV file with Tag Templates information',
                                             required=True)
@@ -112,6 +114,7 @@ class DatacatalogUtilsCLI:
         enrich_filesets = filesets_subparsers.add_parser('enrich',
                                                          help='Enrich GCS filesets with Tags')
 
+        enrich_filesets.add_argument('--project-id', help='Project id', required=True)
         enrich_filesets.add_argument('--tag-template-name',
                                      help='Name of the Fileset Enrich template,'
                                      'i.e: '
@@ -128,23 +131,18 @@ class DatacatalogUtilsCLI:
                                      ' too many GCS buckets')
         enrich_filesets.set_defaults(func=cls.__enrich_fileset)
 
-        create_template = filesets_subparsers.add_parser('create-template',
-                                                         help='Create the Fileset Enrich template')
-
-        create_template.add_argument('--location',
-                                     help='Location of the Fileset Enrich template',
-                                     default='us-central1')
-
-        create_template.set_defaults(func=cls.__create_fileset_template)
-
         clean_up_tags = filesets_subparsers.add_parser(
             'clean-up-templates-and-tags',
             help='Clean up the Fileset Enhancer Template and Tags From the Fileset Entries')
+        clean_up_tags.add_argument('--project-id', help='Project id', required=True)
+
         clean_up_tags.set_defaults(func=cls.__clean_up_fileset_template_and_tags)
 
         delete_filesets_parser = filesets_subparsers.add_parser('delete',
                                                                 help='Delete Filesets Entry Groups'
                                                                 ' and Entries from CSV')
+        delete_filesets_parser.add_argument('--project-id', help='Project id', required=True)
+
         delete_filesets_parser.add_argument('--csv-file',
                                             help='CSV file with Fileset Entries information',
                                             required=True)
@@ -177,6 +175,14 @@ class DatacatalogUtilsCLI:
         create_tags_parser.set_defaults(func=cls.__create_tags)
 
     @classmethod
+    def add_delete_tags_cmd(cls, subparsers):
+        create_tags_parser = subparsers.add_parser('delete', help='Delete Tags from CSV')
+        create_tags_parser.add_argument('--csv-file',
+                                        help='CSV file with Tags information',
+                                        required=True)
+        create_tags_parser.set_defaults(func=cls.__delete_tags)
+
+    @classmethod
     def __enrich_fileset(cls, args):
         tag_fields = None
         if args.tag_fields:
@@ -207,9 +213,9 @@ class DatacatalogUtilsCLI:
             file_path=args.csv_file)
 
     @classmethod
-    def __create_fileset_template(cls, args):
-        datacatalog_fileset_enricher.DatacatalogFilesetEnricher(args.project_id).create_template(
-            args.location)
+    def __delete_tags(cls, args):
+        tag_datasource_processor.TagDatasourceProcessor().delete_tags_from_csv(
+            file_path=args.csv_file)
 
     @classmethod
     def __create_tag_templates(cls, args):
