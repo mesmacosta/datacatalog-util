@@ -352,7 +352,7 @@ datacatalog-util filesets export --project-ids my-project --file-path CSV_FILE_P
 [4]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-tags
 [5]: https://docs.google.com/spreadsheets/d/1bqeAXjLHUq0bydRZj9YBhdlDtuu863nwirx8t4EP_CQ
 [6]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-tag-templates
-[7]: https://img.shields.io/pypi/v/datacatalog-util.svg
+[7]: https://img.shields.io/pypi/v/datacatalog-util.svg?force_cache=true
 [8]: https://pypi.org/project/datacatalog-util/
 [9]: https://img.shields.io/github/license/mesmacosta/datacatalog-util.svg
 [10]: https://img.shields.io/github/issues/mesmacosta/datacatalog-util.svg
