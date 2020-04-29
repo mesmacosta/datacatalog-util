@@ -279,6 +279,9 @@ described as follows:
 datacatalog-util filesets create --project-id my-project  --csv-file CSV_FILE_PATH
 ```
 
+*TIPS* 
+- [sample-input/create-filesets][32] for reference;
+
 ### 6.2. Enrich GCS Filesets with Tags
 Users are able to choose the Tag fields from the list provided at [Tags][23]
 
@@ -344,3 +347,5 @@ datacatalog-util filesets delete --project-id my-project  --csv-file CSV_FILE_PA
 [29]: https://github.com/mesmacosta/datacatalog-util#611-create-the-filesets-entry-groups-and-entries
 [30]: https://github.com/mesmacosta/datacatalog-util#64-delete-the-filesets-entry-groups-and-entries
 [31]: https://github.com/mesmacosta/datacatalog-util#23-run-the-datacatalog-util-script---delete-the-tags
+[32]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-filesets
+
