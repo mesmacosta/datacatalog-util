@@ -21,7 +21,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `filesets`     |**enrich**                      | Enrich GCS filesets with Tags.                      | [GO][20]           | [GO][19]  |
 | `filesets`     |**clean-up-templates-and-tags** | Cleans up the Fileset Template and their Tags.      | [GO][21]           | [GO][19]  |
 | `filesets`     |**delete**                      | Delete GCS filesets from CSV file.                  | [GO][30]           | [GO][28]  |
-| `filesets`     |**export**                      | Export Filesets to CSV file.                        | [GO][30]           | [GO][33]  |
+| `filesets`     |**export**                      | Export Filesets to CSV file.                        | [GO][34]           | [GO][33]  |
 
 ## Executing in Cloud Shell
 ````bash
@@ -378,4 +378,4 @@ datacatalog-util filesets export --project-ids my-project --file-path CSV_FILE_P
 [31]: https://github.com/mesmacosta/datacatalog-util#23-run-the-datacatalog-util-script---delete-the-tags
 [32]: https://github.com/mesmacosta/datacatalog-util/tree/master/sample-input/create-filesets
 [33]: https://github.com/mesmacosta/datacatalog-fileset-exporter
-
+[34]: https://github.com/mesmacosta/datacatalog-util#7-export-filesets-to-csv-file
