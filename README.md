@@ -12,7 +12,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | Group          | Command                        | Description                                         | Documentation Link | Code Repo |
 | ---            | ---                            | ---                                                 | ---                | ---       |
 | `tags`         |**create**                      | Load Tags from CSV file.                            | [GO][12]           | [GO][18]  |
-| `tags`         |**delete**                      | Delete Tags fromCSV file.                           | [GO][31]           | [GO][26]  |
+| `tags`         |**delete**                      | Delete Tags from CSV file.                          | [GO][31]           | [GO][26]  |
 | `tags`         |**export**                      | Export Tags to CSV file.                            | [GO][13]           | [GO][26]  |
 | `tag-templates`|**create**                      | Load Templates from CSV file.                       | [GO][14]           | [GO][24]  |
 | `tag-templates`|**delete**                      | Delete Templates from CSV file.                     | [GO][15]           | [GO][24]  |
