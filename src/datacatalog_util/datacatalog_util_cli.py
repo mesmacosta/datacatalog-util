@@ -3,6 +3,7 @@ import logging
 import sys
 
 from datacatalog_fileset_enricher import datacatalog_fileset_enricher
+from datacatalog_fileset_exporter import fileset_datasource_exporter
 from datacatalog_fileset_processor import fileset_datasource_processor
 from datacatalog_tag_exporter import tag_datasource_exporter
 from datacatalog_tag_manager import tag_datasource_processor
@@ -148,6 +149,16 @@ class DatacatalogUtilsCLI:
                                             required=True)
         delete_filesets_parser.set_defaults(func=cls.__delete_filesets_entry_groups_and_entries)
 
+        export_filesets_parser = filesets_subparsers.add_parser('export',
+                                                                help='Export Filesets to CSV')
+        export_filesets_parser.add_argument('--file-path',
+                                            help='File path where file will be exported')
+        export_filesets_parser.add_argument('--project-ids',
+                                            help='Project ids to narrow down Filesets list,'
+                                            'split by comma',
+                                            required=True)
+        export_filesets_parser.set_defaults(func=cls.__export_filesets)
+
     @classmethod
     def add_delete_tag_templates_cmd(cls, subparsers):
         delete_tag_templates_parser = subparsers.add_parser('delete',
@@ -226,6 +237,11 @@ class DatacatalogUtilsCLI:
     def __delete_tag_templates(cls, args):
         tag_template_datasource_processor.TagTemplateDatasourceProcessor(
         ).delete_tag_templates_from_csv(file_path=args.csv_file)
+
+    @classmethod
+    def __export_filesets(cls, args):
+        fileset_datasource_exporter.FilesetDatasourceExporter().export_filesets(
+            project_ids=args.project_ids, file_path=args.file_path)
 
     @classmethod
     def __export_tag_templates(cls, args):

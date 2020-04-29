@@ -29,6 +29,7 @@ setuptools.setup(
         'datacatalog-fileset-processor',
         'datacatalog-tag-template-processor',
         'datacatalog-tag-template-exporter',
+        'datacatalog-fileset-exporter',
     ),
     setup_requires=('pytest-runner', ),
     tests_require=('pytest-cov', ),

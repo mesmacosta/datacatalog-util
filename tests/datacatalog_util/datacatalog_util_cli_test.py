@@ -137,6 +137,19 @@ class TagManagerCLITest(unittest.TestCase):
         mock_fileset_datasource_processor.delete_entry_groups_and_entries_from_csv(
             file_path='test.csv')
 
+    @mock.patch('datacatalog_util.datacatalog_util_cli.fileset_datasource_exporter.'
+                'FilesetDatasourceExporter')
+    def test_run_export_filesets_should_call_correct_method(self, mock_fileset_exporter):
+        datacatalog_util_cli.DatacatalogUtilsCLI.run([
+            'filesets', 'export', '--file-path', 'test.csv', '--project-ids',
+            'my-project1,my-project2'
+        ])
+
+        filset_datasource_exporter = mock_fileset_exporter.return_value
+        filset_datasource_exporter.export_filesets.assert_called_once()
+        filset_datasource_exporter.export_filesets.assert_called_with(
+            project_ids='my-project1,my-project2', file_path='test.csv')
+
     @mock.patch('datacatalog_util.datacatalog_util_cli.DatacatalogUtilsCLI')
     def test_main_should_call_cli_run(self, mock_cli):
         datacatalog_util.main()
