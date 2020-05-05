@@ -359,7 +359,7 @@ datacatalog-util \
   --bucket-prefix my_bucket
 ```
 
-## 9 Delete up object storage entries on entry group
+## 9. Delete up object storage entries on entry group
 
 ```bash
 datacatalog-util \
