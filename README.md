@@ -402,5 +402,5 @@ datacatalog-util \
 [33]: https://github.com/mesmacosta/datacatalog-fileset-exporter
 [34]: https://github.com/mesmacosta/datacatalog-util#7-export-filesets-to-csv-file
 [35]: https://github.com/mesmacosta/datacatalog-object-storage-processor
-[36]: https://github.com/mesmacosta/datacatalog-util#7-export-filesets-to-csv-file
-[37]: https://github.com/mesmacosta/datacatalog-util#7-export-filesets-to-csv-file
+[36]: https://github.com/mesmacosta/datacatalog-util#8-create-datacatalog-entries-based-on-object-storage-files
+[37]: https://github.com/mesmacosta/datacatalog-util#9-delete-up-object-storage-entries-on-entry-group
