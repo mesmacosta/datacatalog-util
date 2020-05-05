@@ -45,3 +45,8 @@
 ------------------
 
 * Added new fileset export command.
+
+0.9.0 (2020-04-29)
+------------------
+
+* Added new object storage commands.

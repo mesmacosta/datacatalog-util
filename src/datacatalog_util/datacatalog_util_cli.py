@@ -9,6 +9,7 @@ from datacatalog_tag_exporter import tag_datasource_exporter
 from datacatalog_tag_manager import tag_datasource_processor
 from datacatalog_tag_template_exporter import tag_template_datasource_exporter
 from datacatalog_tag_template_processor import tag_template_datasource_processor
+from datacatalog_object_storage_processor import datacatalog_object_storage_processor_cli
 
 
 class DatacatalogUtilsCLI:
@@ -36,6 +37,9 @@ class DatacatalogUtilsCLI:
         cls.add_tags_cmd(subparsers)
 
         cls.add_fileset_enricher_cmd(subparsers)
+
+        datacatalog_object_storage_processor_cli.DatacatalogObjectStorageProcessorCLI.\
+            add_object_storage_parser(subparsers)
 
         return parser.parse_args(argv)
 
