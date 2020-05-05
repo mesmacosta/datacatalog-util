@@ -360,7 +360,6 @@ datacatalog-util \
 ```
 
 ## 9 Delete up object storage entries on entry group
-Delete entries for given entry group
 
 ```bash
 datacatalog-util \
