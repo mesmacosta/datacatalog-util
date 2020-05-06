@@ -173,6 +173,10 @@ The columns for each template file are described as follows:
 | **field_type**             | Type of the Tag field.                                 | 
 | **field_value**            | Value of the Tag field.                                | 
 
+#### 3.1.1 Run in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tags/TUTORIAL.EXPORT.md)
+
 ### 3.2. Run tags export
 
 - Python + virtualenv
@@ -192,8 +196,6 @@ datacatalog-util tags export --project-ids my-project \
 projects/my-project/locations/us-central1/tagTemplates/my-template-2 
 
 ```
-
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tags/TUTORIAL.EXPORT.md)
 
 ## 4. Load Templates from CSV file
 
