@@ -1,7 +1,7 @@
 template_name,display_name,field_id,field_display_name,field_type,enum_values
-projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TEMPLATE,boolean_field1,MY_BOOL_FIELD_1,BOOL,
-projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TEMPLATE,boolean_field2,MY_BOOL_FIELD_2,BOOL,
-projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TEMPLATE,double_field,MY_DOUBLE_FIELD,DOUBLE,
-projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TEMPLATE,enum_data_classification,MY_ENUM_FIELD,ENUM,Restricted|Confidential|None
-projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TEMPLATE,string_field,MY_STRING_FIELD,STRING,
-projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TEMPLATE,timestamp_field,MY_TIMESTAMP_FIELD,TIMESTAMP,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TUTORIAL_TEMPLATE,boolean_field1,MY_BOOL_FIELD_1,BOOL,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TUTORIAL_TEMPLATE,boolean_field2,MY_BOOL_FIELD_2,BOOL,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TUTORIAL_TEMPLATE,double_field,MY_DOUBLE_FIELD,DOUBLE,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TUTORIAL_TEMPLATE,enum_data_classification,MY_ENUM_FIELD,ENUM,Restricted|Confidential|None
+projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TUTORIAL_TEMPLATE,string_field,MY_STRING_FIELD,STRING,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/TEMPLATE_ID,MY_TUTORIAL_TEMPLATE,timestamp_field,MY_TIMESTAMP_FIELD,TIMESTAMP,
