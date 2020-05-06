@@ -210,9 +210,10 @@ Now it should succeed.
 ## Search for the Created Tags
 
 Go to Data Catalog search UI:
-https://console.cloud.google.com/datacatalog?q=tag:my_tutorial_template
+[Search UI](https://console.cloud.google.com/datacatalog?q=tag:my_tutorial_template)
 
-Click on search results, and verify the created tags.
+Click on search results, and verify the created tags. There will be tags at the Dataset, 
+Table and Column levels.
 
 ## Congratulations!
 
