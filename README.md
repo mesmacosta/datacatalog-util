@@ -26,21 +26,8 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `object-storage` |**delete-entries**              | Delete Entries that belong to the Object Storage Files. | [GO][37]           | [GO][35]  |
 
 
-## Executing in Cloud Shell
-````bash
-# Set your SERVICE ACCOUNT, for instructions go to 1.3. Auth credentials
-# This name is just a suggestion, feel free to name it following your naming conventions
-export GOOGLE_APPLICATION_CREDENTIALS=~/datacatalog-util-sa.json
-
-# Install datacatalog-util 
-pip3 install datacatalog-util --user
-
-# Add to your PATH
-export PATH=~/.local/bin:$PATH
-
-# Look for available commands
-datacatalog-util --help
-````
+## Execute Tutorial in Cloud Shell
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tags/TUTORIAL.EXPORT.md)
 
 ## 1. Environment setup
 
