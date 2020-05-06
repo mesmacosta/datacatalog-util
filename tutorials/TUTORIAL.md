@@ -167,4 +167,4 @@ delete-entries      Delete Entries
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
-You've successfully finished the Data Catalog Util Tutorial. For more details for each command, please look at each command tutorial on the README.md file.
+You've successfully finished the Data Catalog Util Tutorial. For more details on each command, please look at each command tutorial on the README.md file.
