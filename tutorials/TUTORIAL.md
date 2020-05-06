@@ -47,7 +47,7 @@ mkdir -p ~/credentials
 
 Next create and download the Service Account Key.
 ```bash
-gcloud iam service-accounts keys create "datacatalog-util-sajson" \
+gcloud iam service-accounts keys create "datacatalog-util-sa.json" \
 --iam-account "datacatalog-util-sa@$PROJECT_ID.iam.gserviceaccount.com" \
 && mv datacatalog-util-sa.json ~/credentials/datacatalog-util-sa.json
 ```
