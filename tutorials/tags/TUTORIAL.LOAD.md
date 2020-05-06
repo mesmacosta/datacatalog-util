@@ -212,8 +212,24 @@ Now it should succeed.
 Go to Data Catalog search UI:
 [Search UI](https://console.cloud.google.com/datacatalog?q=tag:my_tutorial_template)
 
-Click on search results, and verify the created tags. There will be tags at the Dataset, 
+Check the search results, and verify the created tags. There will be tags at the Dataset, 
 Table and Column levels.
+
+## Delete Tags
+
+Run the Python CLI:
+```bash
+datacatalog-util tags delete \
+--csv-file ~/cloudshell_open/datacatalog-util/sample-input/create-tags/tags-opt-1-all-metadata.csv
+```
+
+## Search for the Created Tags
+
+Go to Data Catalog search UI:
+[Search UI](https://console.cloud.google.com/datacatalog?q=tag:my_tutorial_template)
+
+Check the search results, and verify that there are no results. Tags for the `my_tutorial_template` 
+have been deleted.
 
 ## Congratulations!
 
