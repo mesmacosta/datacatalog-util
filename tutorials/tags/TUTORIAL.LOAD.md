@@ -8,7 +8,7 @@ http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.c
 
 ## Intro
 
-This tutorial will walk you through the execution of the Data Catalog Util Export Tags CLI.
+This tutorial will walk you through the execution of the Data Catalog Util Load Tags CLI.
 
 ## Python CLI
 
@@ -56,7 +56,7 @@ Next create and download the Service Account Key.
 ```bash
 gcloud iam service-accounts keys create "datacatalog-util-tags-load-sa.json" \
 --iam-account "datacatalog-util-tags-load-sa@$PROJECT_ID.iam.gserviceaccount.com" \
-&& mv datacatalog-util-tags-exp-sa.json ~/credentials/datacatalog-util-tags-load-sa.json
+&& mv datacatalog-util-tags-load-sa.json ~/credentials/datacatalog-util-tags-load-sa.json
 ```
 
 Next add Data Catalog admin role to the Service Account.
@@ -66,6 +66,15 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 --quiet \
 --project $PROJECT_ID \
 --role "roles/datacatalog.admin"
+```
+
+Next add Big Query admin role to the Service Account.
+```bash
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+--member "serviceAccount:datacatalog-util-tags-load-sa@$PROJECT_ID.iam.gserviceaccount.com" \
+--quiet \
+--project $PROJECT_ID \
+--role "roles/bigquery.admin"
 ```
 
 Next set up the credentials environment variable.
@@ -98,8 +107,8 @@ Enable Big Query API
 gcloud services enable bigquery.googleapis.com --project $PROJECT_ID
 ```
 
-Create a CSV file to load the Big Query table
-```bash
+Create a CSV file to load the Big Query table. Copy this manually.
+```
 cat > us_state_salesregions.csv << EOF
 id,state_code,state_name,sales_region
 1,MO,Missouri,Region_1
@@ -133,7 +142,9 @@ id:NUMERIC,state_code:STRING,state_name:STRING,sales_region:STRING
 
 Load Big Query Table with CSV
 ```bash
-bq load --quote "" --format=csv us_state_sales.us_state_salesregions us_state_salesregions.csv
+bq load --quote "" \
+--skip_leading_rows 1 \
+--format=csv us_state_sales.us_state_salesregions us_state_salesregions.csv
 ```
 
 ## Update the sample CSV file with Project and Big Query Table
@@ -151,16 +162,50 @@ Replace TABLE_ID with us_state_salesregions
 Replace TEMPLATE_ID with my_tutorial_template
 ```
 
-
 ## Execute the Python CLI
 
 Run the Python CLI:
-
-Run the CLI:
 ```bash
 datacatalog-util tags create \
---csv-file cloudshell_open/datacatalog-util/sample-input/create-tags/tags-opt-1-all-metadata.csv
+--csv-file ~/cloudshell_open/datacatalog-util/sample-input/create-tags/tags-opt-1-all-metadata.csv
 ```
+
+You will receive the error:
+```
+WARNING:root:Permission denied when getting Tag Template 
+projects/uat-tools/locations/us-central1/tagTemplates/my_tutorial_template.
+Unable to create Tags using it.
+```
+Because the Tag Template does not exist, so lets create it.
+
+## Create the Tag Template
+
+Open the CSV file at:
+<walkthrough-editor-open-file filePath="cloudshell_open/datacatalog-util/sample-input/create-tag-templates/tag-templates-opt-1-all-metadata.csv"
+                              text="tag-templates-opt-1-all-metadata.csv">
+</walkthrough-editor-open-file>.
+
+Replace the placeholders with your Project information
+```
+Replace PROJECT_ID with your Project
+Replace TEMPLATE_ID with my_tutorial_template
+```
+
+Run the Python CLI:
+```bash
+datacatalog-util tag-templates create \
+--csv-file ~/cloudshell_open/datacatalog-util/sample-input/create-tag-templates/tag-templates-opt-1-all-metadata.csv
+```
+
+## Create Tags
+
+Run the Python CLI:
+```bash
+datacatalog-util tags create \
+--csv-file ~/cloudshell_open/datacatalog-util/sample-input/create-tags/tags-opt-1-all-metadata.csv
+```
+
+Now it should succeed.
 
 ## Search for the Created Tags
 
