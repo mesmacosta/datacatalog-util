@@ -225,7 +225,7 @@ datacatalog-util tags delete \
 
 ## Search for the Created Tags
 
-Go to Data Catalog search UI:
+Go to Data Catalog Search UI:
 [Search UI](https://console.cloud.google.com/datacatalog?q=tag:my_tutorial_template)
 
 Check the search results, and verify that there are no results. Tags for the `my_tutorial_template` 
