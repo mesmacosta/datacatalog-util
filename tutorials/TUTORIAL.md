@@ -79,7 +79,7 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/credentials/datacatalog-util-sa.json
 
 Install and config the datacatalog-util CLI.
 ```bash
-pip3 install datacatalog-util --user
+pip3 install --upgrade datacatalog-util --user
 ```
 Next load it to your PATH.
 ```bash
