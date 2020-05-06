@@ -128,6 +128,10 @@ docker run --rm --tty \
 datacatalog-util tags delete --csv-file CSV_FILE_PATH
 ```
 
+#### 2.4 Execute Tutorial in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tags/TUTORIAL.LOAD.md)
+
 ## 3. Export Tags to CSV file
 
 ### 3.1. A list of CSV files, each representing one Template will be created.
