@@ -103,6 +103,10 @@ described as follows:
 - [sample-input/create-tags][4] for reference;
 - [Data Catalog Sample Tags][5] (Google Sheets) may help to create/export the CSV.
 
+#### 2.1.1 Execute Tutorial in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tags/TUTORIAL.LOAD.md)
+
 ### 2.2. Run the datacatalog-util script - Create the Tags
 
 - Python + virtualenv
@@ -127,10 +131,6 @@ docker run --rm --tty \
 ```bash
 datacatalog-util tags delete --csv-file CSV_FILE_PATH
 ```
-
-#### 2.4 Execute Tutorial in Cloud Shell
-
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tags/TUTORIAL.LOAD.md)
 
 ## 3. Export Tags to CSV file
 
