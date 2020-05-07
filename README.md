@@ -278,8 +278,12 @@ described as follows:
 | **schema_column_description** | Schema column description.| N         |
 | **schema_column_mode**        | Schema column mode.       | N         |
 
+#### 6.1.1 Execute Tutorial in Cloud Shell
 
-### 6.1.1. Create the Filesets Entry Groups and Entries
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/filesets/TUTORIAL.LOAD.md)
+
+
+### 6.2. Create the Filesets Entry Groups and Entries
 
 - Python + virtualenv
 
@@ -290,14 +294,14 @@ datacatalog-util filesets create --project-id my-project  --csv-file CSV_FILE_PA
 *TIPS* 
 - [sample-input/create-filesets][32] for reference;
 
-### 6.2. Enrich GCS Filesets with Tags
+### 6.3. Enrich GCS Filesets with Tags
 Users are able to choose the Tag fields from the list provided at [Tags][23]
 
 ```bash
 datacatalog-util filesets enrich --project-id my-project 
 ```
 
-### 6.2.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
+### 6.3.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
 
 If you are using a different Project, make sure the Service Account has the following permissions on that Project or that Template:
 * Data Catalog TagTemplate Creator
@@ -309,14 +313,14 @@ datacatalog-util filesets \
   enrich --tag-template-name projects/my_different_project/locations/us-central1/tagTemplates/fileset_enricher_findings
 ```
 
-### 6.3. clean up template and tags
+### 6.4. clean up template and tags
 Cleans up the Template and Tags from the Fileset Entries, running the main command will recreate those.
 
 ```bash
 datacatalog-util filesets clean-up-templates-and-tags --project-id my-project 
 ```
 
-### 6.4. Delete the Filesets Entry Groups and Entries
+### 6.5. Delete the Filesets Entry Groups and Entries
 
 - Python + virtualenv
 
