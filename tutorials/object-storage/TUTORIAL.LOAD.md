@@ -23,7 +23,7 @@ Otherwise go to the next step.
 
 Go to the
 <walkthrough-editor-open-file filePath="cloudshell_open/datacatalog-util/README.md" text="README.md">
-</walkthrough-editor-open-file> file, and find the 7. DataCatalog Object Storage commands.
+</walkthrough-editor-open-file> file, and find the 8. DataCatalog Object Storage commands.
 
 ## Set Up the Service Account
 
