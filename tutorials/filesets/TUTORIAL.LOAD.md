@@ -23,7 +23,7 @@ Otherwise go to the next step.
 
 Go to the
 <walkthrough-editor-open-file filePath="cloudshell_open/datacatalog-util/README.md" text="README.md">
-</walkthrough-editor-open-file> file, and find the ## 6. Filesets Commands.
+</walkthrough-editor-open-file> file, and find the 6. Filesets Commands.
 This section explains the CSV columns used to create Data Catalog Filesets.
 
 ## Set Up the Service Account
@@ -68,6 +68,15 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 --role "roles/datacatalog.admin"
 ```
 
+Next add Storage admin role to the Service Account.
+```bash
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+--member "serviceAccount:datacatalog-util-filst-load-sa@$PROJECT_ID.iam.gserviceaccount.com" \
+--quiet \
+--project $PROJECT_ID \
+--role "roles/storage.admin"
+```
+
 Next set up the credentials environment variable.
 ```bash
 export GOOGLE_APPLICATION_CREDENTIALS=~/credentials/datacatalog-util-filst-load-sa.json
@@ -95,7 +104,7 @@ You may skip this, if you already have a Cloud Storage bucket with files in your
 
 Enable Big Query API
 ```bash
-gcloud services enable storage.googleapis.com --project $PROJECT_ID
+gcloud services enable storage-component.googleapis.com --project $PROJECT_ID
 ```
 
 Create a CSV file to load the Cloud Storage bucket. Copy this manually.
@@ -153,11 +162,12 @@ Replace the placeholders with your Project information
 ```
 Replace PROJECT_ID with your Project
 Replace ENTRY_GROUP_ID with filesets_load_group
-Replace ENTRY_ID with filesets_load_tutorial
-Replace TEMPLATE_ID with my_tutorial_template
-Replace MY_BUCKET_NAME with gs://filesets_load_tutorial_$PROJECT_ID/ <- Change $PROJECT_ID placeholder to your project
+Replace MY_ENTRY_ID with filesets_load_tutorial
+Replace MY_BUCKET_NAME with filesets_load_tutorial_$PROJECT_ID <- Change $PROJECT_ID placeholder to your project
 
-The CSV column schema is already set up for this tutorial, we won't use the schema in this tutorial, but it's important to know about it.
+The CSV column schema is already set up 
+ for this tutorial, we won't use the schema
+ in this tutorial, but it's important to know about it.
 ```
 If you want to know more about use cases for Filesets Schemas, go to:
 [Join Streaming Data with Dataflow SQL](https://cloud.google.com/dataflow/docs/samples/join-streaming-data-with-sql)
@@ -199,4 +209,4 @@ have been deleted.
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
-You've successfully finished the Data Catalog Util Load Filesets.
+You've successfully finished the Data Catalog Util Load Filesets Tutorial.
