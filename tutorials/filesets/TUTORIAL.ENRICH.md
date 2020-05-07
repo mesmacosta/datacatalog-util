@@ -8,7 +8,7 @@ http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.c
 
 ## Intro
 
-This tutorial will walk you through the execution of the Data Catalog Util Load Filesets CLI.
+This tutorial will walk you through the execution of the Data Catalog Util Enrich Filesets CLI.
 
 ## Python CLI
 
@@ -200,7 +200,7 @@ Check the search results, and verify the created Tags by clicking on returned re
 
 Run the Python CLI:
 ```bash
-datacatalog-util filesets clean-up-templates-and-tags --project-id my-project 
+datacatalog-util filesets clean-up-templates-and-tags --project-id $PROJECT_ID 
 ```
 
 ## Search for the Fileset Enricher Tags
