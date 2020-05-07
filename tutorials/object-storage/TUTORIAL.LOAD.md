@@ -155,7 +155,7 @@ gsutil cp us_state_salesregions_2.csv gs://object_storage_load_tutorial_$PROJECT
 Run the Python CLI:
 ```bash
 datacatalog-util \
-  object-storage create-entries --type cloud-storage \
+  object-storage sync-entries --type cloud-storage \
   --project-id $PROJECT_ID \
   --entry-group-name my_object_storage_entry_group \
   --bucket-prefix object_storage_load_tutorial_$PROJECT_ID

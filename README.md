@@ -378,7 +378,7 @@ datacatalog-util filesets export --project-ids my-project --file-path CSV_FILE_P
 
 ```bash
 datacatalog-util \
-  object-storage create-entries --type cloud-storage \
+  object-storage sync-entries --type cloud-storage \
   --project-id my_project \
   --entry-group-name my_entry_group_name \
   --bucket-prefix my_bucket
