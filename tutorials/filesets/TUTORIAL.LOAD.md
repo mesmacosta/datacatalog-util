@@ -166,8 +166,9 @@ Replace MY_ENTRY_ID with filesets_load_tutorial
 Replace MY_BUCKET_NAME with filesets_load_tutorial_$PROJECT_ID <- Change $PROJECT_ID placeholder to your project
 
 The CSV column schema is already set up 
- for this tutorial, we won't use the schema
- in this tutorial, but it's important to know about it.
+ for this tutorial, we wont use the schema
+ in this tutorial, but its important to 
+ know about it.
 ```
 If you want to know more about use cases for Filesets Schemas, go to:
 [Join Streaming Data with Dataflow SQL](https://cloud.google.com/dataflow/docs/samples/join-streaming-data-with-sql)
