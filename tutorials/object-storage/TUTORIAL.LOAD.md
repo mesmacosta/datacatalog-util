@@ -8,7 +8,7 @@ http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.c
 
 ## Intro
 
-This tutorial will walk you through the execution of the Data Catalog Util Load Filesets CLI.
+This tutorial will walk you through the execution of the Data Catalog Util Load Object Storage CLI.
 
 ## Python CLI
 
