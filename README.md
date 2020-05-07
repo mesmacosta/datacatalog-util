@@ -301,7 +301,7 @@ Users are able to choose the Tag fields from the list provided at [Tags][23]
 datacatalog-util filesets enrich --project-id my-project 
 ```
 
-### 6.3.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
+#### 6.3.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)
 
 If you are using a different Project, make sure the Service Account has the following permissions on that Project or that Template:
 * Data Catalog TagTemplate Creator
@@ -312,6 +312,11 @@ datacatalog-util filesets \
   --project-id my_project \
   enrich --tag-template-name projects/my_different_project/locations/us-central1/tagTemplates/fileset_enricher_findings
 ```
+
+#### 6.3.2 Execute Fileset Enricher Tutorial in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/filesets/TUTORIAL.ENRICH.md)
+
 
 ### 6.4. clean up template and tags
 Cleans up the Template and Tags from the Fileset Entries, running the main command will recreate those.
