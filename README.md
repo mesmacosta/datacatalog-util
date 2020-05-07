@@ -204,6 +204,10 @@ described as follows:
 | **field_type**         | Type of the Tag Template field.                | Y         |
 | **enum_values**        | Values for the Enum field.                     | N         |
 
+#### 4.1.1 Execute Tutorial in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tag-templates/TUTORIAL.LOAD.md)
+
 
 ### 4.2. Run the datacatalog-util script - Create the Tag Templates
 
