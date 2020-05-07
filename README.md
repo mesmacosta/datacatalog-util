@@ -378,9 +378,9 @@ datacatalog-util filesets export --project-ids my-project --file-path CSV_FILE_P
 
 ```bash
 datacatalog-util \
-  object-storage sync-entries --type cloud-storage \
+  object-storage sync-entries --type cloud_storage \
   --project-id my_project \
-  --entry-group-name my_entry_group_name \
+  --entry-group-name projects/my_project/locations/us-central1/entryGroups/my_entry_group \
   --bucket-prefix my_bucket
 ```
 
@@ -388,9 +388,9 @@ datacatalog-util \
 
 ```bash
 datacatalog-util \
-  object-storage delete-entries --type cloud-storage \
+  object-storage delete-entries --type cloud_storage \
   --project-id my_project \
-  --entry-group-name my_entry_group_name
+  --entry-group-name projects/my_project/locations/us-central1/entryGroups/my_entry_group
 ```
 
 [1]: https://circleci.com/gh/mesmacosta/datacatalog-util.svg?style=svg

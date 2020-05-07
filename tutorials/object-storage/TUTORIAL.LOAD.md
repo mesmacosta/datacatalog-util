@@ -155,9 +155,9 @@ gsutil cp us_state_salesregions_2.csv gs://object_storage_load_tutorial_$PROJECT
 Run the Python CLI:
 ```bash
 datacatalog-util \
-  object-storage sync-entries --type cloud-storage \
+  object-storage sync-entries --type cloud_storage \
   --project-id $PROJECT_ID \
-  --entry-group-name my_object_storage_entry_group \
+  --entry-group-name projects/$PROJECT_ID/locations/us-central1/entryGroups/my_object_storage_entry_group \
   --bucket-prefix object_storage_load_tutorial_$PROJECT_ID
 ```
 
@@ -173,9 +173,9 @@ Check the search results, and verify the created entries.
 Run the Python CLI:
 ```bash
 datacatalog-util \
-  object-storage delete-entries --type cloud-storage \
+  object-storage delete-entries --type cloud_storage \
   --project-id $PROJECT_ID \
-  --entry-group-name my_object_storage_entry_group 
+  --entry-group-name projects/$PROJECT_ID/locations/us-central1/entryGroups/my_object_storage_entry_group
 ```
 
 ## Search for the Created Object Storage Entries
@@ -183,7 +183,7 @@ datacatalog-util \
 Go to Data Catalog search UI:
 [Search UI](https://console.cloud.google.com/datacatalog?q=system=cloud_storage)
 
-Check the search results, and verify that there are no results. Entries for the `object_storage_load_tutorial_$PROJECT_ID` bucket 
+Check the search results, and verify that there are no results. Entries for the `object_storage_load_tutorial` bucket 
 have been deleted.
 
 ## Congratulations!
