@@ -244,6 +244,11 @@ described as follows:
 | **field_type**         | Type of the Tag Template field.                | 
 | **enum_values**        | Values for the Enum field.                     | 
 
+#### 5.1.1 Execute Tutorial in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/tag-templates/TUTORIAL.EXPORT.md)
+
+
 ### 5.2. Run the datacatalog-util script
 
 - Python + virtualenv
