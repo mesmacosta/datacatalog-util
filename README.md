@@ -367,7 +367,14 @@ described as follows:
 datacatalog-util filesets export --project-ids my-project --file-path CSV_FILE_PATH
 ```
 
-## 8. Create DataCatalog entries based on object storage files
+## 7. DataCatalog Object Storage commands
+
+### 7.1 Execute Tutorial in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/object-storage/TUTORIAL.LOAD.md)
+
+
+### 7.2. Create DataCatalog entries based on object storage files
 
 ```bash
 datacatalog-util \
@@ -377,7 +384,7 @@ datacatalog-util \
   --bucket-prefix my_bucket
 ```
 
-## 9. Delete up object storage entries on entry group
+### 7.3. Delete up object storage entries on entry group
 
 ```bash
 datacatalog-util \
