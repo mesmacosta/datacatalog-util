@@ -354,6 +354,11 @@ described as follows:
 | **schema_column_description** | Schema column description.| N         |
 | **schema_column_mode**        | Schema column mode.       | N         |
 
+#### 7.1.1 Execute Tutorial in Cloud Shell
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/filesets/TUTORIAL.EXPORT.md)
+
+
 ### 7.2. Run the datacatalog-util script
 
 - Python + virtualenv
