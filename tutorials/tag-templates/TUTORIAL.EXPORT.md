@@ -116,4 +116,4 @@ Use the Cloud Editor to see the <walkthrough-editor-open-file filePath="output/t
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
-You've successfully finished the Data Catalog Util Export Tags Tutorial.
+You've successfully finished the Data Catalog Util Export Tag Templates Tutorial.
