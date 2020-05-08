@@ -115,7 +115,7 @@ class TagManagerCLITest(unittest.TestCase):
         mock_fileset_enricher_processor = mock_fileset_enricher.return_value
         mock_fileset_enricher_processor.clean_up_fileset_template_and_tags.assert_called_once()
 
-    @mock.patch('datacatalog_util.datacatalog_util_cli.'
+    @mock.patch('datacatalog_fileset_processor.'
                 'fileset_datasource_processor.FilesetDatasourceProcessor')
     def test_run_filesets_create_should_call_correct_method(self, mock_fileset_create):
         datacatalog_util_cli.DatacatalogUtilsCLI.run(
@@ -127,7 +127,7 @@ class TagManagerCLITest(unittest.TestCase):
         mock_fileset_datasource_processor.create_entry_groups_and_entries_from_csv(
             file_path='test.csv')
 
-    @mock.patch('datacatalog_util.datacatalog_util_cli.'
+    @mock.patch('ddatacatalog_fileset_processor.'
                 'fileset_datasource_processor.FilesetDatasourceProcessor')
     def test_run_filesets_delete_should_call_correct_method(self, mock_fileset_delete):
         datacatalog_util_cli.DatacatalogUtilsCLI.run(
