@@ -288,7 +288,7 @@ described as follows:
 - Python + virtualenv
 
 ```bash
-datacatalog-util filesets create --project-id my-project  --csv-file CSV_FILE_PATH
+datacatalog-util filesets create --csv-file CSV_FILE_PATH
 ```
 
 *TIPS* 
@@ -330,7 +330,7 @@ datacatalog-util filesets clean-up-templates-and-tags --project-id my-project
 - Python + virtualenv
 
 ```bash
-datacatalog-util filesets delete --project-id my-project  --csv-file CSV_FILE_PATH
+datacatalog-util filesets delete --csv-file CSV_FILE_PATH
 ```
 
 ## 7. Export Filesets to CSV file

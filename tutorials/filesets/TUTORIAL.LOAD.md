@@ -178,7 +178,6 @@ If you want to know more about use cases for Filesets Schemas, go to:
 Run the Python CLI:
 ```bash
 datacatalog-util filesets create \
---project-id $PROJECT_ID \
 --csv-file ~/cloudshell_open/datacatalog-util/sample-input/create-filesets/fileset-entry-opt-1-all-metadata.csv
 ```
 
@@ -194,7 +193,6 @@ Check the search results, and verify the created filesets.
 Run the Python CLI:
 ```bash
 datacatalog-util filesets delete \
---project-id $PROJECT_ID \
 --csv-file ~/cloudshell_open/datacatalog-util/sample-input/create-filesets/fileset-entry-opt-1-all-metadata.csv
 ```
 
