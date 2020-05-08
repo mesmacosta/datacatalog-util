@@ -119,7 +119,7 @@ class TagManagerCLITest(unittest.TestCase):
                 'fileset_datasource_processor.FilesetDatasourceProcessor')
     def test_run_filesets_create_should_call_correct_method(self, mock_fileset_create):
         datacatalog_util_cli.DatacatalogUtilsCLI.run(
-            ['filesets', 'create', '--project-id', 'my-project1', '--csv-file', 'test.csv'])
+            ['filesets', 'create', '--csv-file', 'test.csv'])
 
         mock_fileset_datasource_processor = mock_fileset_create.return_value
         mock_fileset_datasource_processor.create_entry_groups_and_entries_from_csv.\
@@ -127,11 +127,11 @@ class TagManagerCLITest(unittest.TestCase):
         mock_fileset_datasource_processor.create_entry_groups_and_entries_from_csv(
             file_path='test.csv')
 
-    @mock.patch('ddatacatalog_fileset_processor.'
+    @mock.patch('datacatalog_fileset_processor.'
                 'fileset_datasource_processor.FilesetDatasourceProcessor')
     def test_run_filesets_delete_should_call_correct_method(self, mock_fileset_delete):
         datacatalog_util_cli.DatacatalogUtilsCLI.run(
-            ['filesets', 'delete', '--project-id', 'my-project1', '--csv-file', 'test.csv'])
+            ['filesets', 'delete', '--csv-file', 'test.csv'])
 
         mock_fileset_datasource_processor = mock_fileset_delete.return_value
         mock_fileset_datasource_processor.delete_entry_groups_and_entries_from_csv.\
