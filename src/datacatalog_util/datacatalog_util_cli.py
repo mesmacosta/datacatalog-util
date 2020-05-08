@@ -5,10 +5,10 @@ import sys
 from datacatalog_fileset_enricher import datacatalog_fileset_enricher
 from datacatalog_fileset_exporter import datacatalog_fileset_exporter_cli
 from datacatalog_fileset_processor import fileset_datasource_processor
-from datacatalog_tag_exporter import tag_datasource_exporter
+from datacatalog_tag_exporter import datacatalog_tag_exporter_cli
 from datacatalog_tag_manager import tag_datasource_processor
-from datacatalog_tag_template_exporter import tag_template_datasource_exporter
-from datacatalog_tag_template_processor import tag_template_datasource_processor
+from datacatalog_tag_template_exporter import datacatalog_tag_template_exporter_cli
+from datacatalog_tag_template_processor import datacatalog_tag_template_processor_cli
 from datacatalog_object_storage_processor import datacatalog_object_storage_processor_cli
 
 
@@ -53,7 +53,7 @@ class DatacatalogUtilsCLI:
 
         cls.add_delete_tags_cmd(tags_subparsers)
 
-        cls.add_export_tags_cmd(tags_subparsers)
+        datacatalog_tag_exporter_cli.DatacatalogTagExporterCLI.add_export_tags_cmd(tags_subparsers)
 
     @classmethod
     def add_tag_templates_cmd(cls, subparsers):
@@ -62,43 +62,14 @@ class DatacatalogUtilsCLI:
 
         tag_templates_subparsers = tag_templates_parser.add_subparsers()
 
-        cls.add_create_tag_templates_cmd(tag_templates_subparsers)
+        datacatalog_tag_template_processor_cli.DatacatalogTagTemplateProcessorCLI.\
+            add_create_tag_templates_cmd(tag_templates_subparsers)
 
-        cls.add_delete_tag_templates_cmd(tag_templates_subparsers)
+        datacatalog_tag_template_processor_cli.DatacatalogTagTemplateProcessorCLI.\
+            add_delete_tag_templates_cmd(tag_templates_subparsers)
 
-        cls.add_export_tag_templates_cmd(tag_templates_subparsers)
-
-    @classmethod
-    def add_export_tags_cmd(cls, subparsers):
-        export_tags_parser = subparsers.add_parser('export',
-                                                   help='Export Tags to CSV,'
-                                                   ' creates one file'
-                                                   ' for each teamplate')
-        export_tags_parser.add_argument('--dir-path',
-                                        help='Directory path where files will be exported')
-        export_tags_parser.add_argument('--project-ids',
-                                        help='Project ids to narrow down Templates list,'
-                                        'split by comma',
-                                        required=True)
-        export_tags_parser.add_argument('--tag-templates-names',
-                                        help='Templates names to narrow down Templates list,'
-                                        'split by comma'
-                                        'i.e: '
-                                        'projects/my-project/locations/us-central1/tagTemplates/'
-                                        'my_template_test')
-        export_tags_parser.set_defaults(func=cls.__export_tags)
-
-    @classmethod
-    def add_export_tag_templates_cmd(cls, subparsers):
-        export_tag_templates_parser = subparsers.add_parser('export',
-                                                            help='Export Tag Templates to CSV')
-        export_tag_templates_parser.add_argument('--file-path',
-                                                 help='File path where file will be exported')
-        export_tag_templates_parser.add_argument('--project-ids',
-                                                 help='Project ids to narrow down Templates list,'
-                                                 'split by comma',
-                                                 required=True)
-        export_tag_templates_parser.set_defaults(func=cls.__export_tag_templates)
+        datacatalog_tag_template_exporter_cli.DatacatalogTagTemplateExporterCLI.\
+            add_export_tag_templates_cmd(tag_templates_subparsers)
 
     @classmethod
     def add_fileset_enricher_cmd(cls, subparsers):
@@ -156,24 +127,6 @@ class DatacatalogUtilsCLI:
         # ADD filesets export command.
         datacatalog_fileset_exporter_cli.DatacatalogFilesetExporterCLI.add_export_filesets_cmd(
             filesets_subparsers)
-
-    @classmethod
-    def add_delete_tag_templates_cmd(cls, subparsers):
-        delete_tag_templates_parser = subparsers.add_parser('delete',
-                                                            help='Delete Tag Templates from CSV')
-        delete_tag_templates_parser.add_argument('--csv-file',
-                                                 help='CSV file with Tag Templates information',
-                                                 required=True)
-        delete_tag_templates_parser.set_defaults(func=cls.__delete_tag_templates)
-
-    @classmethod
-    def add_create_tag_templates_cmd(cls, subparsers):
-        create_tag_templates_parser = subparsers.add_parser('create',
-                                                            help='Create Tag Templates from CSV')
-        create_tag_templates_parser.add_argument('--csv-file',
-                                                 help='CSV file with Tag Templates information',
-                                                 required=True)
-        create_tag_templates_parser.set_defaults(func=cls.__create_tag_templates)
 
     @classmethod
     def add_create_tags_cmd(cls, subparsers):
