@@ -393,6 +393,10 @@ datacatalog-util \
   --entry-group-name projects/my_project/locations/us-central1/entryGroups/my_entry_group
 ```
 
+## 9. Data Catalog Templates Examples
+
+[templates_examples.md](docs/templates_examples.md)
+
 [1]: https://circleci.com/gh/mesmacosta/datacatalog-util.svg?style=svg
 [2]: https://circleci.com/gh/mesmacosta/datacatalog-util
 [3]: https://virtualenv.pypa.io/en/latest/
