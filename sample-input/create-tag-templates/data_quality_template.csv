@@ -1,0 +1,6 @@
+template_name,display_name,field_id,field_display_name,field_type,enum_values
+projects/PROJECT_ID/locations/us-central1/tagTemplates/data_quality_template,Data Quality Template,it_owner,IT owner,STRING,
+,,update_frequency,Freshness of data,ENUM,Daily|Hourly|Monthly|Weekly
+,,numrows,Number of rows in the table,DOUBLE,
+,,scope,Scope of data in terms of business regions,STRING,
+,,completeness,Completeness of Data - scale is 0-100,DOUBLE,

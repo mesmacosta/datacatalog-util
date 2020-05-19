@@ -1,0 +1,3 @@
+template_name,display_name,field_id,field_display_name,field_type,enum_values
+projects/PROJECT_ID/locations/us-central1/tagTemplates/pii_template,PII Template,has_pii,Has PII,BOOL,
+,,pii_classification,Data Classification,ENUM,Credit_card|Email_address|Other|Phone_number|SSN
