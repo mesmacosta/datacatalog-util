@@ -26,8 +26,75 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 | `object-storage` |**delete-entries**              | Delete Entries that belong to the Object Storage Files. | [GO][37]           | [GO][35]  |
 
 
+-----
+
 ## Execute Tutorial in Cloud Shell
 [![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/mesmacosta/datacatalog-util&tutorial=tutorials/TUTORIAL.md)
+
+
+<!--
+  ⚠️ DO NOT UPDATE THE TABLE OF CONTENTS MANUALLY ️️⚠️
+  run `npx markdown-toc -i README.md`.
+
+  Please stick to 80-character line wraps as much as you can.
+-->
+
+## Table of Contents
+
+<!-- toc -->
+
+- [1. Environment setup](#1-environment-setup)
+  * [1.1. Python + virtualenv](#11-python--virtualenv)
+    + [1.1.1. Install Python 3.6+](#111-install-python-36)
+    + [1.1.2. Get the source code](#112-get-the-source-code)
+    + [1.1.3. Create and activate an isolated Python environment](#113-create-and-activate-an-isolated-python-environment)
+    + [1.1.4. Install the package](#114-install-the-package)
+  * [1.2. Docker](#12-docker)
+  * [1.3. Auth credentials](#13-auth-credentials)
+    + [1.3.1. Create a service account and grant it below roles](#131-create-a-service-account-and-grant-it-below-roles)
+    + [1.3.2. Download a JSON key and save it as](#132-download-a-json-key-and-save-it-as)
+    + [1.3.3. Set the environment variables](#133-set-the-environment-variables)
+- [2. Load Tags from CSV file](#2-load-tags-from-csv-file)
+  * [2.1. Create a CSV file representing the Tags to be created](#21-create-a-csv-file-representing-the-tags-to-be-created)
+    + [2.1.1 Execute Tutorial in Cloud Shell](#211-execute-tutorial-in-cloud-shell)
+  * [2.2. Run the datacatalog-util script - Create the Tags](#22-run-the-datacatalog-util-script---create-the-tags)
+  * [2.3. Run the datacatalog-util script - Delete the Tags](#23-run-the-datacatalog-util-script---delete-the-tags)
+- [3. Export Tags to CSV file](#3-export-tags-to-csv-file)
+  * [3.1. A list of CSV files, each representing one Template will be created.](#31-a-list-of-csv-files-each-representing-one-template-will-be-created)
+    + [3.1.1 Execute Tutorial in Cloud Shell](#311-execute-tutorial-in-cloud-shell)
+  * [3.2. Run tags export](#32-run-tags-export)
+  * [3.3 Run tags export filtering Tag Templates](#33-run-tags-export-filtering-tag-templates)
+- [4. Load Templates from CSV file](#4-load-templates-from-csv-file)
+  * [4.1. Create a CSV file representing the Templates to be created](#41-create-a-csv-file-representing-the-templates-to-be-created)
+    + [4.1.1 Execute Tutorial in Cloud Shell](#411-execute-tutorial-in-cloud-shell)
+  * [4.2. Run the datacatalog-util script - Create the Tag Templates](#42-run-the-datacatalog-util-script---create-the-tag-templates)
+  * [4.3. Run the datacatalog-util script - Delete the Tag Templates](#43-run-the-datacatalog-util-script---delete-the-tag-templates)
+- [5. Export Templates to CSV file](#5-export-templates-to-csv-file)
+  * [5.1. A CSV file representing the Templates will be created](#51-a-csv-file-representing-the-templates-will-be-created)
+    + [5.1.1 Execute Tutorial in Cloud Shell](#511-execute-tutorial-in-cloud-shell)
+  * [5.2. Run the datacatalog-util script](#52-run-the-datacatalog-util-script)
+- [6. Filesets Commands](#6-filesets-commands)
+  * [6.1. Create a CSV file representing the Entry Groups and Entries to be created](#61-create-a-csv-file-representing-the-entry-groups-and-entries-to-be-created)
+    + [6.1.1 Execute Tutorial in Cloud Shell](#611-execute-tutorial-in-cloud-shell)
+  * [6.2. Create the Filesets Entry Groups and Entries](#62-create-the-filesets-entry-groups-and-entries)
+  * [6.3. Enrich GCS Filesets with Tags](#63-enrich-gcs-filesets-with-tags)
+    + [6.3.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)](#631-enrich-all-fileset-entries-using-tag-template-from-a-different-project-good-way-to-reuse-the-same-template)
+    + [6.3.2 Execute Fileset Enricher Tutorial in Cloud Shell](#632-execute-fileset-enricher-tutorial-in-cloud-shell)
+  * [6.4. clean up template and tags](#64-clean-up-template-and-tags)
+  * [6.5. Delete the Filesets Entry Groups and Entries](#65-delete-the-filesets-entry-groups-and-entries)
+- [7. Export Filesets to CSV file](#7-export-filesets-to-csv-file)
+  * [7.1. A CSV file representing the Filesets will be created](#71-a-csv-file-representing-the-filesets-will-be-created)
+    + [7.1.1 Execute Tutorial in Cloud Shell](#711-execute-tutorial-in-cloud-shell)
+  * [7.2. Run the datacatalog-util script](#72-run-the-datacatalog-util-script)
+- [8. DataCatalog Object Storage commands](#8-datacatalog-object-storage-commands)
+  * [8.1 Execute Tutorial in Cloud Shell](#81-execute-tutorial-in-cloud-shell)
+  * [8.2. Create DataCatalog entries based on object storage files](#82-create-datacatalog-entries-based-on-object-storage-files)
+  * [8.3. Delete object storage entries on entry group](#83-delete-object-storage-entries-on-entry-group)
+- [9. Data Catalog Templates Examples](#9-data-catalog-templates-examples)
+
+<!-- tocstop -->
+
+-----
 
 ## 1. Environment setup
 
