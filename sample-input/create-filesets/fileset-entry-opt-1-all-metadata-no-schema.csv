@@ -1,0 +1,8 @@
+# This is the header
+entry_group_name,entry_group_display_name,entry_group_description,entry_id,entry_display_name,entry_description,entry_file_patterns
+
+# This is my first entry group
+projects/my-project/locations/us-central1/entryGroups/entry_group_test_1a,My Fileset Entry Group a,This Entry Group consists of ....,entry_test_2,My Fileset,This fileset consists of all files for bucket bucket_13c4,gs://bucket_13c4/*
+
+# This is my second entry group
+projects/my-project/locations/us-central1/entryGroups/entry_group_test_2a,My Fileset Entry Group 2,This Entry Group consists of 2....,entry_test_2,My Fileset,This fileset consists of all files for bucket bucket_13c4,gs://bucket_13c4/*.csv|gs://bucket_13c4/*.png
