@@ -8,7 +8,7 @@ with open('HISTORY.md') as history_file:
 
 setuptools.setup(
     name='datacatalog-util',
-    version='0.11.3',
+    version='0.11.4',
     author='Marcelo Miranda',
     author_email='mesmacosta@gmail.com',
     description='A package to manage Google Cloud Data Catalog'
