@@ -386,6 +386,14 @@ datacatalog-util filesets create --csv-file CSV_FILE_PATH
 - If you want to create filesets without schema:
 [sample-input/create-filesets/fileset-entry-opt-1-all-metadata-no-schema.csv][32] for reference;
 
+### 6.2.1 Create the Filesets Entry Groups and Entries - with DataFlow SQL types validation
+
+- Python + virtualenv
+
+```bash
+datacatalog-util filesets create --csv-file CSV_FILE_PATH --validate-dataflow-sql-types
+```
+
 ### 6.3. Enrich GCS Filesets with Tags
 Users are able to choose the Tag fields from the list provided at [Tags][23]
 
