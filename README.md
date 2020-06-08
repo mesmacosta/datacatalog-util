@@ -78,6 +78,7 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
   * [6.1. Create a CSV file representing the Entry Groups and Entries to be created](#61-create-a-csv-file-representing-the-entry-groups-and-entries-to-be-created)
     + [6.1.1 Execute Tutorial in Cloud Shell](#611-execute-tutorial-in-cloud-shell)
   * [6.2. Create the Filesets Entry Groups and Entries](#62-create-the-filesets-entry-groups-and-entries)
+    + [6.2.1 Create the Filesets Entry Groups and Entries - with DataFlow SQL types validation](#621-create-the-filesets-entry-groups-and-entries---with-dataflow-sql-types-validation)
   * [6.3. Enrich GCS Filesets with Tags](#63-enrich-gcs-filesets-with-tags)
     + [6.3.1 Enrich all fileset entries using Tag Template from a different Project (Good way to reuse the same Template)](#631-enrich-all-fileset-entries-using-tag-template-from-a-different-project-good-way-to-reuse-the-same-template)
     + [6.3.2 Execute Fileset Enricher Tutorial in Cloud Shell](#632-execute-fileset-enricher-tutorial-in-cloud-shell)
@@ -386,7 +387,7 @@ datacatalog-util filesets create --csv-file CSV_FILE_PATH
 - If you want to create filesets without schema:
 [sample-input/create-filesets/fileset-entry-opt-1-all-metadata-no-schema.csv][32] for reference;
 
-### 6.2.1 Create the Filesets Entry Groups and Entries - with DataFlow SQL types validation
+#### 6.2.1 Create the Filesets Entry Groups and Entries - with DataFlow SQL types validation
 
 - Python + virtualenv
 
