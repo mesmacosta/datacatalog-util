@@ -365,7 +365,7 @@ described as follows:
 | **schema_column_mode**        | Schema column mode.       | N         |
 
 Please note that the `schema_column_type` is an open string field and accept anything, if you want 
-to use your fileset with Dataflow SQL, follow the data-types in the [official docs][10].
+to use your fileset with Dataflow SQL, follow the data-types in the [official docs][38].
 
 #### 6.1.1 Execute Tutorial in Cloud Shell
 
