@@ -334,16 +334,19 @@ described as follows:
 | Column                        | Description               | Mandatory |
 | ---                           | ---                       | ---       |
 | **entry_group_name**          | Entry Group Name.         | Y         |
-| **entry_group_display_name**  | Entry Group Display Name. | Y         |
-| **entry_group_description**   | Entry Group Description.  | Y         |
+| **entry_group_display_name**  | Entry Group Display Name. | N         |
+| **entry_group_description**   | Entry Group Description.  | N         |
 | **entry_id**                  | Entry ID.                 | Y         |
 | **entry_display_name**        | Entry Display Name.       | Y         |
-| **entry_description**         | Entry Description.        | Y         |
+| **entry_description**         | Entry Description.        | N         |
 | **entry_file_patterns**       | Entry File Patterns.      | Y         |
 | **schema_column_name**        | Schema column name.       | N         |
 | **schema_column_type**        | Schema column type.       | N         |
 | **schema_column_description** | Schema column description.| N         |
 | **schema_column_mode**        | Schema column mode.       | N         |
+
+Please note that the `schema_column_type` is an open string field and accept anything, if you want 
+to use your fileset with Dataflow SQL, follow the data-types in the [official docs][10].
 
 #### 6.1.1 Execute Tutorial in Cloud Shell
 
@@ -500,3 +503,4 @@ datacatalog-util \
 [35]: https://github.com/mesmacosta/datacatalog-object-storage-processor
 [36]: https://github.com/mesmacosta/datacatalog-util#82-create-datacatalog-entries-based-on-object-storage-files
 [37]: https://github.com/mesmacosta/datacatalog-util#83-delete-up-object-storage-entries-on-entry-group
+[38]: https://cloud.google.com/dataflow/docs/reference/sql/data-types
