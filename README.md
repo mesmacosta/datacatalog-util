@@ -43,7 +43,8 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 
 <!-- toc -->
 
-- [1. Environment setup](#1-environment-setup)
+- [0. Executing in Cloud Shell from PyPi](#0-executing-in-cloud-shell-from-pypi)
+- [1. Environment setup for local build](#1-environment-setup-for-local-build)
   * [1.1. Python + virtualenv](#11-python--virtualenv)
     + [1.1.1. Install Python 3.6+](#111-install-python-36)
     + [1.1.2. Get the source code](#112-get-the-source-code)
@@ -96,7 +97,25 @@ A Python package to manage Google Cloud Data Catalog helper commands and scripts
 
 -----
 
-## 1. Environment setup
+## 0. Executing in Cloud Shell from PyPi
+If you want to execute this script directly in cloud shell, download it from PyPi:
+
+````bash
+# Set your SERVICE ACCOUNT, for instructions go to 1.3. Auth credentials
+# This name is just a suggestion, feel free to name it following your naming conventions
+export GOOGLE_APPLICATION_CREDENTIALS=~/credentials/datacatalog-util-sa.json
+
+# Install datacatalog-util
+pip3 install --upgrade datacatalog-util --user
+
+# Add to your PATH
+export PATH=~/.local/bin:$PATH
+
+# Look for available commands
+datacatalog-util --help
+````
+
+## 1. Environment setup for local build
 
 ### 1.1. Python + virtualenv
 
