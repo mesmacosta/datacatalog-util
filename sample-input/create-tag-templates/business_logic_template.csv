@@ -1,2 +1,2 @@
 template_name,display_name,field_id,field_display_name,field_type,enum_values
-projects/PROJECT_ID/locations/us-central1/tagTemplates/business_logic_template,Business Logic,formula,Formula detailing business logic,STRING,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/business_logic,Business Logic,formula,Formula detailing business logic,STRING,

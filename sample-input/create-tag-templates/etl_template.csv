@@ -1,5 +1,5 @@
 template_name,display_name,field_id,field_display_name,field_type,enum_values
-projects/PROJECT_ID/locations/us-central1/tagTemplates/etl_template,ETL Template,num_ingested,Number of rows-records ingested-processed during the most recent ETL job run,DOUBLE,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/etl,ETL,num_ingested,Number of rows-records ingested-processed during the most recent ETL job run,DOUBLE,
 ,,time_start_etl_job,Time stamp at the start of the most recent ETL job run,STRING,
 ,,num_warnings,Number of warnings encountered during the most recent ETL job run,DOUBLE,
 ,,data_quality_score,Data quality score for the the most recent ETL job run,DOUBLE,

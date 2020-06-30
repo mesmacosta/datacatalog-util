@@ -1,5 +1,5 @@
 template_name,display_name,field_id,field_display_name,field_type,enum_values
-projects/PROJECT_ID/locations/us-central1/tagTemplates/data_discovery_template,Data Discovery Template,biz_owner,Business Owner,STRING,
+projects/PROJECT_ID/locations/us-central1/tagTemplates/data_discovery,Data Discovery,biz_owner,Business Owner,STRING,
 ,,history,History of the data asset tagged with this template,STRING,
 ,,it_owner,IT Owner,STRING,
 ,,numrows,Number of rows records in the data asset tagged with this template,DOUBLE,
