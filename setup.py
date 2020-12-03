@@ -8,7 +8,7 @@ with open('HISTORY.md') as history_file:
 
 setuptools.setup(
     name='datacatalog-util',
-    version='0.11.4',
+    version='0.11.5',
     author='Marcelo Miranda',
     author_email='mesmacosta@gmail.com',
     description='A package to manage Google Cloud Data Catalog'
@@ -23,7 +23,8 @@ setuptools.setup(
     },
     include_package_data=True,
     install_requires=(
-        'datacatalog-tag-manager',
+        'google-cloud-datacatalog >= 1.0.0, < 2.0.0',
+        'datacatalog-tag-manager==2.0.5',
         'datacatalog-tag-exporter',
         'datacatalog-fileset-enricher',
         'datacatalog-fileset-processor==0.1.4',
