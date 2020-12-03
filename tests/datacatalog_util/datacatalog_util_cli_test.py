@@ -29,8 +29,8 @@ class TagManagerCLITest(unittest.TestCase):
         datacatalog_util_cli.DatacatalogUtilsCLI.run(['tags', 'create', '--csv-file', 'test.csv'])
 
         tag_datasource_processor = mock_tag_datasource_processor.return_value
-        tag_datasource_processor.create_tags_from_csv.assert_called_once()
-        tag_datasource_processor.create_tags_from_csv.assert_called_with(file_path='test.csv')
+        tag_datasource_processor.upsert_tags_from_csv.assert_called_once()
+        tag_datasource_processor.upsert_tags_from_csv.assert_called_with(file_path='test.csv')
 
     @mock.patch(
         'datacatalog_util.datacatalog_util_cli.tag_datasource_processor.TagDatasourceProcessor')
