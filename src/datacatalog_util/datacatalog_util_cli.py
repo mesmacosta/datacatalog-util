@@ -147,7 +147,7 @@ class DatacatalogUtilsCLI:
 
     @classmethod
     def __create_tags(cls, args):
-        tag_datasource_processor.TagDatasourceProcessor().create_tags_from_csv(
+        tag_datasource_processor.TagDatasourceProcessor().upsert_tags_from_csv(
             file_path=args.csv_file)
 
     @classmethod
